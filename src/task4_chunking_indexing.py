@@ -11,7 +11,10 @@ Mỗi document/chunk phải theo docs/MODULE_CONTRACTS.md. ID cần ổn định
 chạy lại pipeline không tạo dữ liệu trùng. Task 5 phải dùng chung embed_texts().
 """
 
+import os
 from pathlib import Path
+
+from dotenv import load_dotenv
 
 
 STANDARDIZED_DIR = Path(__file__).parent.parent / "data" / "standardized"
@@ -22,20 +25,69 @@ CHUNK_SIZE = 500
 CHUNK_OVERLAP = 50
 CHUNKING_METHOD = "recursive"
 
-EMBEDDING_MODEL = "BAAI/bge-m3"
-EMBEDDING_DIM = 1024
+EMBEDDING_MODEL = "text-embedding-3-small"
+EMBEDDING_DIM = 1536
+EMBEDDING_BATCH_SIZE = 100
 
 COLLECTION_NAME = "rag_documents"
 
 
 def embed_texts(texts: list[str]) -> list[list[float]]:
-    # TODO: Dispatch theo EMBEDDING_PROVIDER trong .env.
-    #
-    # Provider local gợi ý:
-    from sentence_transformers import SentenceTransformer
-    model = SentenceTransformer(EMBEDDING_MODEL)
-    return model.encode(texts).tolist()
-    # raise NotImplementedError("Implement embed_texts")
+    """Tạo embedding cho các đoạn văn bằng OpenAI Embeddings API."""
+    if not texts:
+        return []
+
+    load_dotenv()
+
+    provider = os.getenv("EMBEDDING_PROVIDER", "openai").lower()
+    if provider != "openai":
+        raise ValueError(
+            f"Task 4 is configured for OpenAI embeddings, got provider: {provider}"
+        )
+
+    api_key = os.getenv("OPENAI_API_KEY")
+    if not api_key:
+        raise RuntimeError(
+            "OPENAI_API_KEY is missing. Set it in the project .env file."
+        )
+
+    model_name = os.getenv("EMBEDDING_MODEL", EMBEDDING_MODEL)
+
+    from openai import OpenAI
+
+    client = OpenAI(api_key=api_key)
+    vectors: list[list[float]] = []
+
+    for start in range(0, len(texts), EMBEDDING_BATCH_SIZE):
+        batch = texts[start : start + EMBEDDING_BATCH_SIZE]
+        response = client.embeddings.create(
+            model=model_name,
+            input=batch,
+        )
+
+        batch_data = sorted(response.data, key=lambda item: item.index)
+        batch_vectors = [item.embedding for item in batch_data]
+
+        if len(batch_vectors) != len(batch):
+            raise RuntimeError(
+                "OpenAI returned a different number of embeddings than inputs."
+            )
+
+        vectors.extend(batch_vectors)
+
+    if len(vectors) != len(texts):
+        raise RuntimeError(
+            "Embedding count does not match input text count."
+        )
+
+    for vector in vectors:
+        if len(vector) != EMBEDDING_DIM:
+            raise RuntimeError(
+                f"Expected embedding dimension {EMBEDDING_DIM}, "
+                f"got {len(vector)}."
+            )
+
+    return vectors
 
 
 def get_collection():
@@ -57,16 +109,20 @@ def load_documents() -> list[dict]:
     # TODO: Đọc mọi .md và tạo Document theo contract.
     #
     documents = []
-    for path in STANDARDIZED_DIR.rglob("*.md"):
+    for path in sorted(STANDARDIZED_DIR.rglob("*.md")):
         doc_type = "legal" if "legal" in path.parts else "news"
+        content = path.read_text(encoding="utf-8").strip()
+        if not content:
+            raise ValueError(f"Empty standardized document: {path}")
+
         documents.append({
             "id": path.relative_to(STANDARDIZED_DIR).as_posix(),
-            "content": path.read_text(encoding="utf-8"),
+            "content": content,
             "metadata": {
                 "source": path.name,
                 "title": path.stem,
                 "doc_type": doc_type,
-                "url": None,
+                "url": "",
             },
         })
 
@@ -90,20 +146,34 @@ def chunk_documents(documents: list[dict]) -> list[dict]:
     chunks = []
     for document in documents:
         for index, text in enumerate(splitter.split_text(document["content"])):
+            content = text.strip()
+            if not content:
+                continue
+
             chunks.append({
                 "id": f"{document['id']}::chunk-{index}",
-                "content": text,
+                "content": content,
                 "metadata": {**document["metadata"], "chunk_index": index},
             })
+
+    if not chunks:
+        raise ValueError("No non-empty chunks were created")
+
     return chunks
     # raise NotImplementedError("Implement chunk_documents")
 
 
 def embed_chunks(chunks: list[dict]) -> list[dict]:
     """Thêm embedding vào từng chunk."""
-    # TODO: Embed theo batch và giữ nguyên các field của chunk.
-    #
+    if not chunks:
+        return []
+
     vectors = embed_texts([chunk["content"] for chunk in chunks])
+    if len(vectors) != len(chunks):
+        raise RuntimeError(
+            "Embedding count does not match chunk count."
+        )
+
     for chunk, vector in zip(chunks, vectors):
         chunk["embedding"] = vector
     return chunks
@@ -112,14 +182,27 @@ def embed_chunks(chunks: list[dict]) -> list[dict]:
 
 def index_to_vectorstore(chunks: list[dict]) -> None:
     """Upsert chunks vào ChromaDB."""
-    # TODO: Upsert ids, documents, embeddings và metadatas.
-    #
+    if not chunks:
+        raise ValueError("Cannot index an empty chunk list")
+
+    ids = [chunk["id"] for chunk in chunks]
+    if len(set(ids)) != len(ids):
+        raise ValueError("Duplicate chunk IDs detected")
+
+    metadatas = []
+    for chunk in chunks:
+        metadata = {
+            key: "" if value is None else value
+            for key, value in chunk["metadata"].items()
+        }
+        metadatas.append(metadata)
+
     collection = get_collection()
     collection.upsert(
-        ids=[chunk["id"] for chunk in chunks],
+        ids=ids,
         documents=[chunk["content"] for chunk in chunks],
         embeddings=[chunk["embedding"] for chunk in chunks],
-        metadatas=[chunk["metadata"] for chunk in chunks],
+        metadatas=metadatas,
     )
     # raise NotImplementedError("Implement index_to_vectorstore")
 
