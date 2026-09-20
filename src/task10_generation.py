@@ -12,10 +12,11 @@ Nếu context không đủ hoặc provider lỗi, trả safe refusal; không b�
 """
 
 import os
+import time
 
 from dotenv import load_dotenv
 
-from .task9_retrieval_pipeline import retrieve
+from .task9_retrieval_pipeline import get_retrieval_trace, retrieve
 
 
 load_dotenv()
@@ -92,27 +93,77 @@ def call_llm(system_prompt: str, user_message: str) -> str:
 
 
 def generate_with_citation(query: str, top_k: int = TOP_K) -> dict:
-    """Trả về GenerationResult."""
+    """Trả về GenerationResult kèm \"steps\" mô tả chi tiết pipeline."""
+    t0 = time.perf_counter()
+    steps: list[dict] = []
+
     chunks = retrieve(query, top_k=top_k)
+    steps = list(get_retrieval_trace())
+
     if not chunks:
+        steps.append({
+            "phase": "generation",
+            "title": "Không đủ context",
+            "detail": "Retrieval không trả về chunk nào — dùng câu trả lời an toàn, không bịa thông tin.",
+            "status": "skip",
+            "duration_ms": round((time.perf_counter() - t0) * 1000, 1),
+        })
         return {
             "answer": "Tôi không thể xác minh thông tin này từ nguồn hiện có.",
             "sources": [],
             "retrieval_source": "none",
+            "steps": steps,
         }
+
     reordered = reorder_for_llm(chunks)
+    steps.append({
+        "phase": "generation",
+        "title": "Sắp xếp context (chống lost-in-the-middle)",
+        "detail": (
+            f"Đưa {len(reordered)} chunks quan trọng lên đầu/cuối context "
+            "để LLM không bỏ sót thông tin giữa."
+        ),
+        "status": "ok",
+        "duration_ms": round((time.perf_counter() - t0) * 1000, 1),
+    })
+
     context = format_context(reordered)
+    steps.append({
+        "phase": "generation",
+        "title": "Xây dựng context cho LLM",
+        "detail": f"{len(reordered)} chunks, {len(context)} ký tự, kèm title + source label.",
+        "status": "ok",
+        "duration_ms": round((time.perf_counter() - t0) * 1000, 1),
+    })
+
     user_message = f"Context:\n{context}\n\nQuestion: {query}"
-    
+
+    t = time.perf_counter()
     try:
         answer = call_llm(SYSTEM_PROMPT, user_message)
+        llm_error = None
     except Exception as e:
         answer = f"Lỗi gọi LLM: {e}"
-        
+        llm_error = str(e)
+
+    model_note = LLM_MODEL or ("gpt-4o-mini" if LLM_PROVIDER.lower() == "openai" else "gemini-2.5-flash")
+    steps.append({
+        "phase": "generation",
+        "title": "Gọi LLM sinh câu trả lời",
+        "detail": (
+            f"Provider {LLM_PROVIDER}, model {model_note}, temperature={TEMPERATURE}, "
+            f"top_p={TOP_P}, max_output_tokens={MAX_OUTPUT_TOKENS}."
+            + (f" Lỗi: {llm_error}" if llm_error else "")
+        ),
+        "status": "error" if llm_error else "ok",
+        "duration_ms": round((time.perf_counter() - t) * 1000, 1),
+    })
+
     return {
         "answer": answer,
         "sources": chunks,
         "retrieval_source": chunks[0]["retrieval_method"],
+        "steps": steps,
     }
 
 
