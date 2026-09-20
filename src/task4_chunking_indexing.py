@@ -20,6 +20,8 @@ from pathlib import Path
 
 from dotenv import load_dotenv
 
+from dotenv import load_dotenv
+
 
 load_dotenv()
 
@@ -31,11 +33,8 @@ CHUNK_SIZE = 500
 CHUNK_OVERLAP = 50
 CHUNKING_METHOD = "recursive"
 
-# Provider embedding chọn trong .env: openai | sentence_transformers.
-EMBEDDING_PROVIDER = os.getenv("EMBEDDING_PROVIDER", "openai").lower().strip()
-EMBEDDING_MODEL = os.getenv("EMBEDDING_MODEL", "text-embedding-3-small")
-EMBEDDING_DIM = int(os.getenv("EMBEDDING_DIM", "1536"))
-EMBEDDING_BATCH_SIZE = int(os.getenv("EMBEDDING_BATCH_SIZE", "128"))
+EMBEDDING_MODEL = "BAAI/bge-m3"
+EMBEDDING_DIM = 1024
 
 COLLECTION_NAME = "rag_documents"
 
@@ -80,17 +79,12 @@ def _embed_sentence_transformers(texts: list[str]) -> list[list[float]]:
 
 
 def embed_texts(texts: list[str]) -> list[list[float]]:
-    """Embed danh sách văn bản theo EMBEDDING_PROVIDER trong .env."""
-    if not texts:
-        return []
-    if EMBEDDING_PROVIDER == "openai":
-        return _embed_openai(texts)
-    if EMBEDDING_PROVIDER in {"sentence_transformers", "sentence-transformers", "local"}:
-        return _embed_sentence_transformers(texts)
-    raise ValueError(
-        f"EMBEDDING_PROVIDER không hỗ trợ: {EMBEDDING_PROVIDER!r}. "
-        "Dùng 'openai' hoặc 'sentence_transformers'."
-    )
+    from sentence_transformers import SentenceTransformer
+    # Initialize the model only once if possible, but here it's fine for the lab
+    # We use a global model to avoid reloading if called multiple times
+    if not hasattr(embed_texts, "model"):
+        embed_texts.model = SentenceTransformer(EMBEDDING_MODEL)
+    return embed_texts.model.encode(texts).tolist()
 
 
 def get_collection():
@@ -108,11 +102,15 @@ def get_collection():
 def load_documents() -> list[dict]:
     """Đọc Markdown và trả về danh sách Document."""
     documents = []
-    for path in STANDARDIZED_DIR.rglob("*.md"):
+    for path in sorted(STANDARDIZED_DIR.rglob("*.md")):
         doc_type = "legal" if "legal" in path.parts else "news"
+        content = path.read_text(encoding="utf-8").strip()
+        if not content:
+            raise ValueError(f"Empty standardized document: {path}")
+
         documents.append({
             "id": path.relative_to(STANDARDIZED_DIR).as_posix(),
-            "content": path.read_text(encoding="utf-8"),
+            "content": content,
             "metadata": {
                 "source": path.name,
                 "title": path.stem,
@@ -135,19 +133,32 @@ def chunk_documents(documents: list[dict]) -> list[dict]:
     chunks = []
     for document in documents:
         for index, text in enumerate(splitter.split_text(document["content"])):
+            content = text.strip()
+            if not content:
+                continue
+
             chunks.append({
                 "id": f"{document['id']}::chunk-{index}",
-                "content": text,
+                "content": content,
                 "metadata": {**document["metadata"], "chunk_index": index},
             })
+
+    if not chunks:
+        raise ValueError("No non-empty chunks were created")
+
     return chunks
 
 
 def embed_chunks(chunks: list[dict]) -> list[dict]:
     """Thêm embedding vào từng chunk."""
-    if not chunks:
-        return []
+    # TODO: Embed theo batch và giữ nguyên các field của chunk.
+    #
     vectors = embed_texts([chunk["content"] for chunk in chunks])
+    if len(vectors) != len(chunks):
+        raise RuntimeError(
+            "Embedding count does not match chunk count."
+        )
+
     for chunk, vector in zip(chunks, vectors):
         chunk["embedding"] = vector
     return chunks
@@ -155,8 +166,8 @@ def embed_chunks(chunks: list[dict]) -> list[dict]:
 
 def index_to_vectorstore(chunks: list[dict]) -> None:
     """Upsert chunks vào ChromaDB."""
-    if not chunks:
-        return
+    # TODO: Upsert ids, documents, embeddings và metadatas.
+    #
     collection = get_collection()
     collection.upsert(
         ids=[chunk["id"] for chunk in chunks],

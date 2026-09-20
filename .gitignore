@@ -17,6 +17,7 @@ dist/
 *.egg
 *.egg-info/
 pip-wheel-metadata/
+chroma_db/
 
 # Test / type-check / coverage caches
 .coverage
