@@ -28,16 +28,25 @@ def download_documents() -> None:
     # TODO: Có thể tải thủ công hoặc dùng requests.
     #
     # Ví dụ:
-    # import requests
-    #
-    # sources = {
-    #     "policy-a.pdf": "https://example.edu/policy-a.pdf",
-    # }
-    # for filename, url in sources.items():
-    #     response = requests.get(url, timeout=30)
-    #     response.raise_for_status()
-    #     (DATA_DIR / filename).write_bytes(response.content)
-    raise NotImplementedError("Implement download_documents")
+    import requests
+    
+    sources = {
+        "luat_thuong_mai_dien_tu_2025.docx": (
+            "https://gatewayduthaoonline.quochoi.vn/uploadFiles/host/local/2025/12/10/10/d3cad3c4d68b4a75b95fcd5e8562fa5e.docx"
+        ),
+        "luat_108_2025_qh15.docx": (
+            "https://static3.luatvietnam.vn/uploaded/others/2025/12/16/luat-108-2025-qh15_1612185241.docx"
+        ),
+        "luat_thue_thu_nhap_doanh_nghiep.docx": (
+            "https://static3.luatvietnam.vn/uploaded/others/2025/09/18/luat-67-2025-qh15_1809150248.docx"
+        ),
+    }
+    for filename, url in sources.items():
+        response = requests.get(url, timeout=30)
+        response.raise_for_status()
+        output_path = (DATA_DIR / filename).write_bytes(response.content)
+        print(f"Downloaded: {output_path} from {url}")
+    # raise NotImplementedError("Implement download_documents")
 
 
 if __name__ == "__main__":
