@@ -1,107 +1,107 @@
 [
   {
-    "question": "Người đàn ông ở Nghệ An đã mua căn hộ bao nhiêu mét vuông và vấn đề chính của vụ án là gì?",
-    "expected_answer": "Người đàn ông đã mua căn hộ 122m2 và vấn đề chính là cách xác định diện tích căn hộ theo tim tường hay thông thủy.",
+    "question": "Các chủ thể tham gia hoạt động thương mại điện tử phải tuân thủ những quy định nào?",
+    "expected_answer": "Các chủ thể tham gia hoạt động thương mại điện tử phải tuân thủ các quy định của Luật này, các quy định của pháp luật về dịch vụ, chất lượng sản phẩm, hàng hóa, tiêu chuẩn, quy chuẩn kỹ thuật, dữ liệu, an ninh mạng, quảng cáo, thuế, bảo vệ quyền lợi người tiêu dùng, cạnh tranh và các quy định khác của pháp luật có liên quan.",
     "expected_context": [
-      "###  [ Mua căn hộ 122m2, chủ nhà đòi lại tiền 9m2 cột, hộp kỹ thuật, tường bao ](https://vietnamnet.vn/mua-can-ho-122m2-chu-nha-doi-lai-tien-9m2-cot-hop-ky-thuat-tuong-bao-2555609.html \"Mua căn hộ 122m2, chủ nhà đòi lại tiền 9m2 cột, hộp kỹ thuật, tường bao\")\nMua căn hộ 122m2, một người đàn ông ở Nghệ An cho rằng 9,1m2 gồm cột, hộp kỹ thuật và phần tường bao đã bị tính vào giá bán. Nút thắt của vụ án nằm ở cách xác định diện tích căn hộ theo tim tường hay thông thủy."
+      "2. Các chủ thể tham gia hoạt động thương mại điện tử tuân thủ các quy định của Luật này, các quy định của pháp luật về dịch vụ, chất lượng sản phẩm, hàng hóa, tiêu chuẩn, quy chuẩn kỹ thuật, dữ liệu, an ninh mạng, quảng cáo, thuế, bảo vệ quyền lợi người tiêu dùng, cạnh tranh và các quy định khác của pháp luật có liên quan.\n\n3. Hoạt động thương mại điện tử không giới hạn về mặt địa lý, trừ trường hợp tổ chức, cá nhân tự giới hạn phạm vi địa lý hoặc pháp luật có quy định khác."
     ]
   },
   {
-    "question": "Ai là chủ sở hữu bản quyền năm 2016?",
-    "expected_answer": "MVA Group",
+    "question": "Số tiền thuế, khoản thu khác, tiền chậm nộp, tiền phạt nộp thừa sẽ bị xử lý như thế nào sau 10 năm không được bù trừ hay đề nghị hoàn thuế?",
+    "expected_answer": "Số tiền thuế, khoản thu khác, tiền chậm nộp, tiền phạt nộp thừa sẽ bị xóa sau 10 năm kể từ ngày nộp tiền vào ngân sách nhà nước mà người nộp thuế không bù trừ nghĩa vụ nộp thuế, khoản thu khác, tiền chậm nộp, tiền phạt và không đề nghị hoàn thuế.",
     "expected_context": [
-      "2016 Copyright © MVA Group . All rights reserved. \n[](https://mva.vn/bo-thue-khoan-ho-kinh-doanh-tu-nam-2026/#top)\n  *   * [Trang chủ](https://mva.vn)\n  * [Giới thiệu](https://mva.vn/gioi-thieu/)\n  * [Dịch vụ kế toán](https://mva.vn/dich-vu-ke-toan/)\n    * [Dịch Vụ Báo Cáo Thuế](https://mva.vn/dich-vu-bao-cao-thue/)\n    * [Dịch Vụ Hoàn Thuế](https://mva.vn/dich-vu-hoan-thue/)\n    * [Dịch Vụ Quyết Toán Thuế](https://mva.vn/dich-vu-quyet-toan-thue/)"
+      "b) Số tiền thuế, khoản thu khác, tiền chậm nộp, tiền phạt nộp thừa quá thời hạn 10 năm kể từ ngày nộp tiền vào ngân sách nhà nước mà người nộp thuế không bù trừ nghĩa vụ nộp thuế, khoản thu khác, tiền chậm nộp, tiền phạt và không đề nghị hoàn thuế, khoản thu khác, tiền chậm nộp, tiền phạt."
     ]
   },
   {
-    "question": "Theo Luật Thuế thu nhập cá nhân 2007, ai sẽ không phải nộp thuế?",
-    "expected_answer": "Người có doanh thu từ kinh doanh dưới 100 triệu đồng một năm sẽ không phải chịu loại thuế này.",
+    "question": "Những khoản chi nào không được trừ khi xác định thu nhập chịu thuế?",
+    "expected_answer": "Khoản chi không đáp ứng đủ các điều kiện quy định tại khoản 1 Điều này và khoản tiền phạt do vi phạm hành chính.",
     "expected_context": [
-      "Luật sư Nguyễn Đình Hiệp cho rằng buộc kê khai, đăng ký là công cụ quản lý để tránh thất thu thuế. Nhưng thủ tục hành chính này trong một số trường hợp có thể đem lại rắc rối hoặc khiến cá nhân e ngại khi quyết định kinh doanh.\nTheo ông Hiệp, không phải mọi trường hợp cá nhân đã đăng ký đều phải nộp thuế. Bởi, theo Luật Thuế thu nhập cá nhân 2007, người có doanh thu từ kinh doanh dưới 100 triệu đồng một năm sẽ không phải chịu loại thuế này, gồm trường hợp thu nhập phát sinh từ bán hàng online."
+      "b12) Một số khoản đóng góp vào các quỹ được thành lập theo quyết định của Thủ tướng Chính phủ và quy định của Chính phủ;\n\nc) Các khoản chi có đủ hoá đơn, chứng từ thanh toán không dùng tiền mặt theo quy định của pháp luật, trừ các trường hợp đặc thù theo quy định của Chính phủ.\n\n2. Các khoản chi không được trừ khi xác định thu nhập chịu thuế bao gồm:\n\na) Khoản chi không đáp ứng đủ các điều kiện quy định tại khoản 1 Điều này;\n\nb) Khoản tiền phạt do vi phạm hành chính;"
     ]
   },
   {
-    "question": "Quyết định xử lý sau thanh tra liên quan đến điều gì?",
-    "expected_answer": "Liên quan đến nghĩa vụ thuế và khoản thu khác phải nộp cho người nộp thuế.",
+    "question": "Trong lĩnh vực nào có thể được hưởng ưu đãi thuế theo quy định?",
+    "expected_answer": "Ưu đãi thuế có thể được hưởng trong lĩnh vực nông nghiệp, lâm nghiệp, ngư nghiệp, và diêm nghiệp.",
     "expected_context": [
-      "hoặc quyết định xử lý sau thanh tra liên quan đến nghĩa vụ thuế và khoản thu khác phải nộp cho người nộp thuế để thực hiện"
+      "b) Trường hợp ưu đãi thuế trong lĩnh vực nông nghiệp, lâm nghiệp, ngư nghiệp, diêm nghiệp;\n\nc) Trường hợp trong kỳ tính thuế đầu tiên có doanh thu hoặc trong kỳ tính thuế đầu tiên có thu nhập từ dự án đầu tư của doanh nghiệp (bao gồm cả dự án đầu tư mới, dự án đầu tư mở rộng, doanh nghiệp công nghệ cao, doanh nghiệp nông nghiệp ứng dụng công nghệ cao, doanh nghiệp khoa học và công nghệ) có thời gian phát sinh doanh thu, thu nhập được hưởng ưu đãi thuế dưới 12 tháng."
     ]
   },
   {
-    "question": "Chính phủ đã ban hành văn bản nào để triển khai chủ trương quản lý thuế đối với hộ, cá nhân kinh doanh?",
-    "expected_answer": "Nghị định số 68/2026/NĐ-CP",
+    "question": "Các tổ chức hay cá nhân có nghĩa vụ gì khi cơ quan nhà nước yêu cầu thông tin về dịch vụ logistics hỗ trợ thương mại điện tử?",
+    "expected_answer": "Các tổ chức hay cá nhân phải cung cấp thông tin, dữ liệu về việc cung cấp dịch vụ logistics hỗ trợ thương mại điện tử khi có yêu cầu của cơ quan nhà nước có thẩm quyền.",
     "expected_context": [
-      "Để triển khai chủ trương này Chính phủ đã ban hành Nghị định số 68/2026/NĐ-CP, Bộ Tài chính ban hành Thông tư số 18/2026/TT-BTC quy định về hồ sơ, thủ tục quản lý thuế đối với hộ, cá nhân kinh doanh, đồng thời ngành Thuế cũng triển khai Chiến dịch cao điểm \"15 ngày đồng hành, hỗ trợ cùng hộ kinh doanh\" trước kỳ kê khai thuế quý I/2026 đã cho thấy quyết tâm của ngành Thuế cũng như toàn thể hệ thống chính trị trong công tác hiện đại hoá thủ tục thuế và sát cánh tiếp sức hộ kinh doanh."
+      "3. Cung cấp thông tin, dữ liệu về việc cung cấp dịch vụ logistics hỗ trợ thương mại điện tử khi có yêu cầu của cơ quan nhà nước có thẩm quyền để phục vụ công tác quản lý, kiểm tra, giám sát hoạt động thương mại điện tử.\n\n4. Không cung cấp dịch vụ cho nền tảng thương mại điện tử đã được cơ quan nhà nước có thẩm quyền công khai thông báo vi phạm pháp luật trên Hệ thống quản lý hoạt động thương mại điện tử."
     ]
   },
   {
-    "question": "Nội dung chính của bài viết về kiến trúc Na Uy là gì?",
-    "expected_answer": "Bài viết nói về cách mà kiến trúc Na Uy thiết kế để sống với mùa đông, biến bóng tối thành liệu pháp ánh sáng.",
+    "question": "Ngành thuế đã thực hiện những giải pháp gì để siết quản lý dữ liệu?",
+    "expected_answer": "Ngành thuế đã thực hiện việc kết nối, chia sẻ dữ liệu với các bộ ngành, ghi nhận 663.000 lượt kết nối với cơ sở dữ liệu dân cư của Bộ Công an và chia sẻ thông tin với Bộ Công Thương về 929 sàn thương mại điện tử.",
     "expected_context": [
-      "###  [ Thiết kế để sống với mùa đông: Kiến trúc Na Uy biến bóng tối thành liệu pháp ánh sáng ](https://vietnamnet.vn/khi-kien-truc-thap-sang-man-dem-2429173.html \"Thiết kế để sống với mùa đông: Kiến trúc Na Uy biến bóng tối thành liệu pháp ánh sáng\")\n##  [ Nội thất ](https://vietnamnet.vn/bat-dong-san/noi-that \"Nội thất\")"
+      "Để siết quản lý, một trong những giải pháp được ngành thuế thực hiện là kết nối, chia sẻ dữ liệu với các bộ ngành. Hiện, cơ quan này ghi nhận trên 663.000 lượt kết nối với cơ sở dữ liệu dân cư của Bộ Công an. Họ cũng chia sẻ thông tin với Bộ Công Thương về 929 sàn thương mại điện tử, đối chiếu dữ liệu từ 361 sàn, trong đó có nhiều sàn chiếm thị phần lớn như Shopee, Lazada, Sendo, Voso, Tiki..."
     ]
   },
   {
-    "question": "Ai đã tặng hoa và chúc mừng tập thể Thuế TP. Hồ Chí Minh nhân Kỷ niệm 81 năm Ngày truyền thống ngành Thuế?",
-    "expected_answer": "Thứ trưởng Bộ Tài chính Cao Anh Tuấn",
+    "question": "Trong khoảng thời gian nào P. đã chốt hơn 35.000 đơn hàng?",
+    "expected_answer": "Trong 10 ngày tham gia bán hàng theo hình thức affiliate vào tháng 12/2025.",
     "expected_context": [
-      "16:35 | 10/09/2026\nNgày 10/9, cùng với Đoàn công tác của Ủy ban Kinh tế và Tài chính của Quốc hội khóa XVI làm việc với Thuế TP. Hồ Chí Minh về tình hình thực hiện chính sách pháp luật thuế và góp ý mốt số nội dung của các dự án luật sửa đổi, bổ sung, Thứ trưởng Bộ Tài chính Cao Anh Tuấn tặng hoa và chúc mừng tập thể Thuế TP. Hồ Chí Minh nhân Kỷ niệm 81 năm Ngày truyền thống ngành Thuế (10/9/1945 - 10/9/2026)."
+      "Mới đây, hot girl P. thu hút sự chú ý khi tiết lộ chỉ trong 10 ngày tham gia bán hàng theo hình thức affiliate vào tháng 12/2025 đã chốt hơn 35.000 đơn, mang về gần 7,6 tỉ đồng doanh thu và khoảng 517 triệu đồng tiền hoa hồng. Một trường hợp khác là nữ streamer, người bán hàng online nổi tiếng N., cho biết riêng ngày 1/1/2026 đã bán được 560 đơn thông qua link tiếp thị và nhận khoảng 13,5 triệu đồng hoa hồng."
     ]
   },
   {
-    "question": "Người nộp thuế phải nộp thuế bằng đồng tiền nào?",
-    "expected_answer": "Người nộp thuế phải nộp thuế bằng đồng tiền mà họ đã khai thuế.",
+    "question": "Khi nào thuế khoán sẽ chính thức bị xóa bỏ theo thông tin từ Cục trưởng Mai Xuân Thành?",
+    "expected_answer": "Thuế khoán sẽ chính thức bị xóa bỏ từ năm 2026.",
     "expected_context": [
-      "3. Đồng tiền nộp thuế, khoản thu khác là đồng tiền khai thuế, khoản thu khác theo quy định tại khoản 7 Điều 12 của Luật này. Người nộp thuế khai thuế, khoản thu khác bằng đồng tiền nào thì nộp bằng đồng tiền đó."
+      "| --- |  \n| ![Chính thức xóa bỏ thuế khoán từ 2026: Giải pháp giúp Hộ kinh doanh kê khai thuế đúng và bền vững](https://cdn.tapchikinhtetaichinh.vn/stores/news_dataimages/2026/032026/12/17/anh-thanh20260312173712.jpg?rt=20260312173738)  |  \n| --- |  \n| Cục trưởng Mai Xuân Thành chia sẻ các giải pháp hỗ trợ hộ kinh doanh  |  \n**Bước chuyển mình sang quản trị minh bạch**"
     ]
   },
   {
-    "question": "Các yêu cầu cần thông báo rõ ràng với người dùng khi tích hợp nền tảng là gì?",
-    "expected_answer": "Người dùng cần được thông báo về tên nền tảng được tích hợp, quyền và nghĩa vụ của các bên, phương thức tiếp nhận và giải quyết phản ánh, yêu cầu, khiếu nại, và có cơ chế cho phép thể hiện sự đồng ý trước mỗi lần truy cập.",
+    "question": "Căn cứ nào được sử dụng để tính tiền lãi trong trường hợp áp thuế 20% đối với bất động sản?",
+    "expected_answer": "Cần làm rõ căn cứ nào để tính tiền lãi.",
     "expected_context": [
-      "c) Thông báo rõ ràng với người dùng về tên nền tảng được tích hợp; quyền và nghĩa vụ của các bên; phương thức tiếp nhận và giải quyết phản ánh, yêu cầu, khiếu nại; có cơ chế cho phép người dùng thể hiện sự đồng ý trước mỗi lần truy cập nền tảng được tích hợp.\n\nd) Xây dựng tiêu chí kỹ thuật, bảo mật và các điều kiện liên quan đến việc phân quyền, truy cập, kiểm soát, sử dụng dữ liệu giữa các bên, bảo đảm tuân thủ pháp luật về dữ liệu."
+      "[![](https://vietnamnet.vn/ap-thue-20-lai-ban-bat-dong-san-can-lam-ro-can-cu-nao-de-tinh-tien-lai-2425198.html)](https://vietnamnet.vn/luot-song-bat-dong-san-chiu-thue-cao-buoc-ngoat-ngan-gia-tang-dot-bien-2424734.html)"
     ]
   },
   {
-    "question": "Hải quan khu vực XI đang thực hiện hoạt động gì để cải thiện chất lượng phục vụ?",
-    "expected_answer": "Hải quan khu vực XI lắng nghe doanh nghiệp để nâng cao chất lượng phục vụ.",
+    "question": "Thuế khoán hộ kinh doanh là gì?",
+    "expected_answer": "Thuế khoán hộ kinh doanh là một loại thuế áp dụng cho các hộ kinh doanh, có thể được thay đổi hoặc bỏ vào năm 2026.",
     "expected_context": [
-      "##  Đọc nhiều\n[ ![Hải quan khu vực XI lắng nghe doanh nghiệp để nâng cao chất lượng phục vụ](https://cdn.tapchikinhtetaichinh.vn/stores/news_dataimages/2026/092026/20/09/croped/medium/hai-quan-khu-vuc-xi-120260920091907.webp?rt=202609201525?260920093023) ](https://thuehaiquan.tapchikinhtetaichinh.vn/hai-quan-khu-vuc-xi-lang-nghe-doanh-nghiep-de-nang-cao-chat-luong-phuc-vu-167488.html \"Hải quan khu vực XI lắng nghe doanh nghiệp để nâng cao chất lượng phục vụ\")"
+      "## **I. Thuế khoán hộ kinh doanh là gì?**\n![Bỏ thuế khoán hộ kinh doanh từ năm 2026: Những thay đổi quan trọng](https://mva.vn/wp-content/uploads/2026/04/AN-ANH-WEBSITE-8.png)Bỏ thuế khoán hộ kinh doanh từ năm 2026: Những thay đổi quan trọng\n### **1.1 Khái niệm thuế khoán**"
     ]
   },
   {
-    "question": "Người nộp thuế tạm thời có bị tính tiền chậm nộp trong thời gian khoanh tiền thuế nợ không?",
-    "expected_answer": "Không, người nộp thuế tạm thời chưa bị tính tiền chậm nộp trong thời gian khoanh tiền thuế nợ.",
+    "question": "Chủ quản nền tảng thương mại điện tử nước ngoài có trách nhiệm gì khi có hoạt động thương mại điện tử tại Việt Nam?",
+    "expected_answer": "Chủ quản nền tảng thương mại điện tử nước ngoài có hoạt động thương mại điện tử tại Việt Nam phải thực hiện các trách nhiệm quy định tại Điều 28 của Luật.",
     "expected_context": [
-      "4. Người nộp thuế tạm thời chưa bị tính tiền chậm nộp trong thời gian khoanh tiền thuế nợ. Sau khi chấm dứt hiệu lực của quyết định khoanh tiền thuế nợ, cơ quan quản lý thuế thực hiện tính đủ tiền chậm nộp kể từ thời điểm hết hạn nộp thuế theo quy định, trừ trường hợp quy định tại điểm e khoản 1 Điều này."
+      "### Điều 28. Trách nhiệm của chủ quản nền tảng thương mại điện tử nước ngoài có hoạt động thương mại điện tử tại Việt Nam, người bán, người livestream bán hàng, người tiếp thị liên kết trên nền tảng thương mại điện tử nước ngoài có hoạt động thương mại điện tử tại Việt Nam\n\n1. Chủ quản nền tảng thương mại điện tử nước ngoài có hoạt động thương mại điện tử tại Việt Nam quy định tại Điều 27 của Luật này thực hiện các trách nhiệm sau đây:"
     ]
   },
   {
-    "question": "Chứng từ điện tử là gì theo Điều 27?",
-    "expected_answer": "Chứng từ điện tử là chứng từ thu thuế, phí, lệ phí hoặc chứng từ khấu trừ thuế ở dạng dữ liệu điện tử do cơ quan quản lý thuế hoặc tổ chức có trách nhiệm khấu trừ thuế cấp cho người nộp thuế bằng phương tiện điện tử.",
+    "question": "Quyết định cưỡng chế thi hành quyết định hành chính về quản lý thuế được gửi cho ai?",
+    "expected_answer": "Quyết định cưỡng chế thi hành quyết định hành chính về quản lý thuế phải được gửi cho người nộp thuế bị cưỡng chế và các tổ chức, cá nhân có liên quan.",
     "expected_context": [
-      "# Điều 27. Chứng từ điện tử\n\n1.Chứng từ điện tử là chứng từ thu thuế, phí, lệ phí hoặc chứng từ khấu trừ thuế ở dạng dữ liệu điện tử do cơ quan quản lý thuế hoặc tổ chức có trách nhiệm khấu trừ thuế cấp cho người nộp thuế bằng phương tiện điện tử.\n\n2. Nguyên tắc lập, quản lý, sử dụng chứng từ điện tử\n\na) Việc đăng ký, quản lý, sử dụng chứng từ điện tử phải tuân thủ pháp luật về giao dịch điện tử, pháp luật về kế toán và pháp luật về thuế;"
+      "3. Quyết định cưỡng chế thi hành quyết định hành chính về quản lý thuế phải được gửi cho người nộp thuế bị cưỡng chế và các tổ chức, cá nhân có liên quan. Trường hợp có đầy đủ cơ sở hạ tầng điện tử để phục vụ truyền nhận điện tử thì các quyết định cưỡng chế thi hành quyết định hành chính thuế được gửi bằng phương thức điện tử đến người nộp thuế và các tổ chức, cá nhân có liên quan để tổ chức thi hành."
     ]
   },
   {
-    "question": "Thời hạn nộp thuế và khoản thu khác được xác định như thế nào?",
-    "expected_answer": "Thời hạn nộp thuế và khoản thu khác là thời hạn ghi trên thông báo, quyết định của cơ quan quản lý thuế theo quy định của pháp luật.",
+    "question": "Thu nhập còn lại sau khi bù trừ sẽ bị áp dụng mức thuế suất thuế thu nhập doanh nghiệp như thế nào?",
+    "expected_answer": "Phần thu nhập còn lại sau khi bù trừ sẽ áp dụng mức thuế suất thuế thu nhập doanh nghiệp của hoạt động sản xuất, kinh doanh.",
     "expected_context": [
-      "b) Đối với trường hợp cơ quan quản lý thuế tính thuế, khoản thu khác, thông báo nộp thuế, khoản thu khác, quyết định xử lý về thuế, khoản thu khác thì thời hạn nộp thuế, khoản thu khác, tiền chậm nộp, tiền phạt là thời hạn ghi trên thông báo, quyết định của cơ quan quản lý thuế theo quy định của pháp luật"
+      ". Phần thu nhập còn lại sau khi bù trừ áp dụng mức thuế suất thuế thu nhập doanh nghiệp của hoạt động sản xuất, kinh doanh còn thu nhập."
     ]
   },
   {
-    "question": "Hội thảo trực tuyến do Cục Thuế phối hợp cùng ai tổ chức vào ngày 12/3/2026?",
-    "expected_answer": "Cổng Thông tin điện tử Chính phủ và Công ty Sapo.",
+    "question": "Các khoản chi nào không được trừ khi xác định thu nhập chịu thuế?",
+    "expected_answer": "Khoản chi không đáp ứng đủ các điều kiện quy định tại khoản 1 Điều này và khoản tiền phạt do vi phạm hành chính.",
     "expected_context": [
-      "17:59 | 12/03/2026\nTrong bối cảnh kinh tế số, việc chuyển đổi từ thuế khoán sang kê khai theo Nghị quyết số 198/2025/QH15 là bước ngoặt quan trọng đối với hàng triệu hộ kinh doanh. Để đồng hành cùng bà con, ngày 12/3/2026, Cục Thuế phối hợp cùng Cổng Thông tin điện tử Chính phủ và Công ty Sapo tổ chức Hội thảo trực tuyến nhằm tháo gỡ khó khăn, hướng dẫn kê khai thuế đúng và quản trị dòng tiền hiệu quả."
+      "b12) Một số khoản đóng góp vào các quỹ được thành lập theo quyết định của Thủ tướng Chính phủ và quy định của Chính phủ;\n\nc) Các khoản chi có đủ hoá đơn, chứng từ thanh toán không dùng tiền mặt theo quy định của pháp luật, trừ các trường hợp đặc thù theo quy định của Chính phủ.\n\n2. Các khoản chi không được trừ khi xác định thu nhập chịu thuế bao gồm:\n\na) Khoản chi không đáp ứng đủ các điều kiện quy định tại khoản 1 Điều này;\n\nb) Khoản tiền phạt do vi phạm hành chính;"
     ]
   },
   {
-    "question": "Chế độ ưu tiên đối với người nộp thuế tuân thủ tốt pháp luật về thuế được áp dụng như thế nào theo quy định của Chính phủ?",
-    "expected_answer": "Người nộp thuế tuân thủ tốt pháp luật về thuế sẽ được áp dụng chế độ ưu tiên, bao gồm việc kết nối, chia sẻ dữ liệu điện tử về sổ kế toán, hóa đơn, chứng từ và các tài liệu liên quan đến nghĩa vụ thuế thông qua Hệ thống thông tin quản lý thuế theo quy định của Chính phủ.",
+    "question": "Trách nhiệm bảo đảm khả năng truy cập thông tin hợp đồng trên nền tảng trong thời gian bao lâu?",
+    "expected_answer": "Ít nhất 03 năm kể từ thời điểm giao kết hợp đồng.",
     "expected_context": [
-      "c) Áp dụng chế độ ưu tiên đối với người nộp thuế tuân thủ tốt pháp luật về thuế, sẵn sàng kết nối, chia sẻ dữ liệu điện tử với cơ quan quản lý thuế, bao gồm dữ liệu về sổ kế toán, hóa đơn, chứng từ và các tài liệu liên quan đến nghĩa vụ thuế thông qua Hệ thống thông tin quản lý thuế theo quy định của Chính phủ.\n\nChính phủ quy định chi tiết về điều kiện, phạm vi và hình thức áp dụng chế độ ưu tiên đối với người nộp thuế tuân thủ pháp luật."
+      "a) Trách nhiệm quy định tại khoản 1 Điều này;\n\nb) Bảo đảm khả năng truy cập thông tin, dữ liệu liên quan đến hợp đồng giao kết trong thời gian ít nhất 03 năm kể từ thời điểm giao kết hợp đồng trên nền tảng, trừ trường hợp quy định tại điểm b khoản này;"
     ]
   }
 ]

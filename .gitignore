@@ -43,6 +43,9 @@ data/_tmp_pdf/
 chroma_db/
 chroma_db_*/
 
+# Ragas per-item checkpoints (regenerated on each evaluation run)
+group_project/evaluation/artifacts/
+
 # Temp / cache
 .pytest_cache/
 *.tmp
