@@ -38,6 +38,11 @@ ARTICLE_URLS = [
     "https://vietnamnet.vn/ap-thue-20-lai-ban-bat-dong-san-can-lam-ro-can-cu-nao-de-tinh-tien-lai-2425198.html",
     "https://mva.vn/bo-thue-khoan-ho-kinh-doanh-tu-nam-2026/",
     # TODO: Thêm ít nhất 5 public URL.
+    "https://vnexpress.net/dan-ban-hang-online-lo-bi-truy-thu-thue-4755087.html",
+    "https://cafef.vn/cu-soc-thue-voi-tiep-thi-lien-ket-nhan-ve-tui-3-ty-dong-nhung-bi-truy-thue-gan-700-trieu-dong-vi-ly-do-sau-day-188260509162820923.chn",
+    "https://thuehaiquan.tapchikinhtetaichinh.vn/chinh-thuc-xoa-bo-thue-khoan-tu-2026-giai-phap-giup-ho-kinh-doanh-ke-khai-thue-dung-va-ben-vung-150688.html",
+    "https://vietnamnet.vn/ap-thue-20-lai-ban-bat-dong-san-can-lam-ro-can-cu-nao-de-tinh-tien-lai-2425198.html",
+    "https://mva.vn/bo-thue-khoan-ho-kinh-doanh-tu-nam-2026/"
 ]
 
 # --- Brave qua CDP -------------------------------------------------------
@@ -142,27 +147,20 @@ def shutdown_brave() -> None:
 
 
 async def crawl_article(url: str) -> dict:
-    """Crawl một bài viết bằng Crawl4AI nối vào Brave qua CDP."""
-    from crawl4ai import AsyncWebCrawler, BrowserConfig
-
-    cdp_url = get_brave_cdp_url()
-    config = BrowserConfig(cdp_url=cdp_url, verbose=False)
-
-    async with AsyncWebCrawler(config=config) as crawler:
+    # TODO: Implement crawling logic.
+    #
+    from datetime import datetime
+    from crawl4ai import AsyncWebCrawler
+    
+    async with AsyncWebCrawler() as crawler:
         result = await crawler.arun(url=url)
-
-    metadata = result.metadata or {}
-    title = str(metadata.get("title") or "").strip() or url
-    content = (result.markdown or "").strip()
-    if not content:
-        raise RuntimeError(f"Không trích xuất được markdown từ {url}")
-
-    return {
-        "url": url,
-        "title": title,
-        "date_crawled": datetime.now().isoformat(timespec="seconds"),
-        "content_markdown": content,
-    }
+        return {
+            "url": url,
+            "title": result.metadata.get("title", "Unknown"),
+            "date_crawled": datetime.now().isoformat(),
+            "content_markdown": result.markdown,
+        }
+    # raise NotImplementedError("Implement crawl_article")
 
 
 async def crawl_all() -> None:

@@ -48,30 +48,28 @@ def _looks_like_html(content: bytes) -> bool:
 
 def download_documents() -> None:
     """Tải ít nhất 3 PDF/DOCX từ nguồn công khai."""
-    if not SOURCES:
-        print(
-            "SOURCES đang trống. Thêm ít nhất 3 cặp filename -> URL "
-            "vào SOURCES rồi chạy lại."
-        )
-        return
-
-    headers = {"User-Agent": USER_AGENT}
-    for filename, url in SOURCES.items():
-        target = DATA_DIR / filename
-        if target.exists() and target.stat().st_size > 0:
-            print(f"Skip existing: {target}")
-            continue
-        try:
-            response = requests.get(url, timeout=TIMEOUT_SECONDS, headers=headers)
-            response.raise_for_status()
-            if not response.content:
-                raise ValueError("response body rỗng")
-            if _looks_like_html(response.content):
-                raise ValueError("URL trả về HTML thay vì file PDF/DOCX")
-            target.write_bytes(response.content)
-            print(f"Saved: {target} ({len(response.content)} bytes)")
-        except Exception as error:
-            print(f"Failed: {filename} — {error}")
+    # TODO: Có thể tải thủ công hoặc dùng requests.
+    #
+    # Ví dụ:
+    import requests
+    
+    sources = {
+        "luat_thuong_mai_dien_tu_2025.docx": (
+            "https://gatewayduthaoonline.quochoi.vn/uploadFiles/host/local/2025/12/10/10/d3cad3c4d68b4a75b95fcd5e8562fa5e.docx"
+        ),
+        "luat_108_2025_qh15.docx": (
+            "https://static3.luatvietnam.vn/uploaded/others/2025/12/16/luat-108-2025-qh15_1612185241.docx"
+        ),
+        "luat_thue_thu_nhap_doanh_nghiep.docx": (
+            "https://static3.luatvietnam.vn/uploaded/others/2025/09/18/luat-67-2025-qh15_1809150248.docx"
+        ),
+    }
+    for filename, url in sources.items():
+        response = requests.get(url, timeout=30)
+        response.raise_for_status()
+        output_path = (DATA_DIR / filename).write_bytes(response.content)
+        print(f"Downloaded: {output_path} from {url}")
+    # raise NotImplementedError("Implement download_documents")
 
 
 if __name__ == "__main__":
