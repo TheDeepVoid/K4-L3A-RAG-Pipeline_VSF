@@ -170,6 +170,10 @@ def run_pipeline() -> None:
     """Chạy load, chunk, embed và index."""
     documents = load_documents()
     chunks = chunk_documents(documents)
+    # Seed BM25 corpus của Task 6 bằng chính chunks này (cùng corpus với Task 5).
+    from . import task6_lexical_search as task6
+
+    task6.CORPUS = chunks
     embedded_chunks = embed_chunks(chunks)
     index_to_vectorstore(embedded_chunks)
     print(f"Indexed {len(embedded_chunks)} chunks")
