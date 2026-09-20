@@ -7,12 +7,21 @@ Hướng dẫn:
     3. Embed chunks bằng một provider duy nhất.
     4. Upsert vào ChromaDB với cosine distance.
 
+Embedding: dùng OpenAI API (key trong .env), không tải model local.
+    - EMBEDDING_PROVIDER=openai (mặc định): gọi embeddings API của OpenAI.
+    - EMBEDDING_PROVIDER=sentence_transformers: chạy model local (fallback).
+
 Mỗi document/chunk phải theo docs/MODULE_CONTRACTS.md. ID cần ổn định để
 chạy lại pipeline không tạo dữ liệu trùng. Task 5 phải dùng chung embed_texts().
 """
 
+import os
 from pathlib import Path
 
+from dotenv import load_dotenv
+
+
+load_dotenv()
 
 STANDARDIZED_DIR = Path(__file__).parent.parent / "data" / "standardized"
 CHROMA_DIR = Path(__file__).parent.parent / "chroma_db"
@@ -22,24 +31,72 @@ CHUNK_SIZE = 500
 CHUNK_OVERLAP = 50
 CHUNKING_METHOD = "recursive"
 
-EMBEDDING_MODEL = "BAAI/bge-m3"
-EMBEDDING_DIM = 1024
+# Provider embedding chọn trong .env: openai | sentence_transformers.
+EMBEDDING_PROVIDER = os.getenv("EMBEDDING_PROVIDER", "openai").lower().strip()
+EMBEDDING_MODEL = os.getenv("EMBEDDING_MODEL", "text-embedding-3-small")
+EMBEDDING_DIM = int(os.getenv("EMBEDDING_DIM", "1536"))
+EMBEDDING_BATCH_SIZE = int(os.getenv("EMBEDDING_BATCH_SIZE", "128"))
 
 COLLECTION_NAME = "rag_documents"
 
+_openai_client = None
+_st_model = None
+
+
+def _get_openai_client():
+    """Singleton cho OpenAI client (đọc OPENAI_API_KEY từ .env)."""
+    global _openai_client
+    if _openai_client is None:
+        if not os.getenv("OPENAI_API_KEY", ""):
+            raise RuntimeError(
+                "OPENAI_API_KEY chưa được cấu hình. Thêm key vào .env "
+                "(xem .env.example) rồi chạy lại."
+            )
+        from openai import OpenAI
+
+        _openai_client = OpenAI()
+    return _openai_client
+
+
+def _embed_openai(texts: list[str]) -> list[list[float]]:
+    """Embed bằng OpenAI embeddings API, gọi theo batch."""
+    client = _get_openai_client()
+    vectors: list[list[float]] = []
+    for start in range(0, len(texts), EMBEDDING_BATCH_SIZE):
+        batch = texts[start : start + EMBEDDING_BATCH_SIZE]
+        response = client.embeddings.create(model=EMBEDDING_MODEL, input=batch)
+        vectors.extend([item.embedding for item in response.data])
+    return vectors
+
+
+def _embed_sentence_transformers(texts: list[str]) -> list[list[float]]:
+    """Fallback: model local qua sentence-transformers (load một lần)."""
+    global _st_model
+    if _st_model is None:
+        from sentence_transformers import SentenceTransformer
+
+        _st_model = SentenceTransformer(EMBEDDING_MODEL)
+    return _st_model.encode(texts).tolist()
+
 
 def embed_texts(texts: list[str]) -> list[list[float]]:
-    from sentence_transformers import SentenceTransformer
-    # Initialize the model only once if possible, but here it's fine for the lab
-    # We use a global model to avoid reloading if called multiple times
-    if not hasattr(embed_texts, "model"):
-        embed_texts.model = SentenceTransformer(EMBEDDING_MODEL)
-    return embed_texts.model.encode(texts).tolist()
+    """Embed danh sách văn bản theo EMBEDDING_PROVIDER trong .env."""
+    if not texts:
+        return []
+    if EMBEDDING_PROVIDER == "openai":
+        return _embed_openai(texts)
+    if EMBEDDING_PROVIDER in {"sentence_transformers", "sentence-transformers", "local"}:
+        return _embed_sentence_transformers(texts)
+    raise ValueError(
+        f"EMBEDDING_PROVIDER không hỗ trợ: {EMBEDDING_PROVIDER!r}. "
+        "Dùng 'openai' hoặc 'sentence_transformers'."
+    )
 
 
 def get_collection():
     """Mở Chroma collection dùng cosine distance."""
     import chromadb
+
     CHROMA_DIR.mkdir(parents=True, exist_ok=True)
     client = chromadb.PersistentClient(path=str(CHROMA_DIR))
     return client.get_or_create_collection(
@@ -69,6 +126,7 @@ def load_documents() -> list[dict]:
 def chunk_documents(documents: list[dict]) -> list[dict]:
     """Chia Document thành chunks có id và chunk_index."""
     from langchain_text_splitters import RecursiveCharacterTextSplitter
+
     splitter = RecursiveCharacterTextSplitter(
         chunk_size=CHUNK_SIZE,
         chunk_overlap=CHUNK_OVERLAP,
@@ -100,9 +158,6 @@ def index_to_vectorstore(chunks: list[dict]) -> None:
     if not chunks:
         return
     collection = get_collection()
-    
-    # Batch upsert logic could be added here if chunks list is too large, 
-    # but for this lab a simple upsert is sufficient
     collection.upsert(
         ids=[chunk["id"] for chunk in chunks],
         documents=[chunk["content"] for chunk in chunks],
