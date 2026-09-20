@@ -20,9 +20,6 @@ from pathlib import Path
 
 from dotenv import load_dotenv
 
-from dotenv import load_dotenv
-
-
 load_dotenv()
 
 STANDARDIZED_DIR = Path(__file__).parent.parent / "data" / "standardized"
@@ -33,8 +30,11 @@ CHUNK_SIZE = 500
 CHUNK_OVERLAP = 50
 CHUNKING_METHOD = "recursive"
 
-EMBEDDING_MODEL = "BAAI/bge-m3"
-EMBEDDING_DIM = 1024
+# Provider embedding chọn trong .env: openai (mặc định) | sentence_transformers.
+EMBEDDING_PROVIDER = os.getenv("EMBEDDING_PROVIDER", "openai").lower().strip()
+EMBEDDING_MODEL = os.getenv("EMBEDDING_MODEL", "text-embedding-3-small")
+EMBEDDING_DIM = int(os.getenv("EMBEDDING_DIM", "1536"))
+EMBEDDING_BATCH_SIZE = int(os.getenv("EMBEDDING_BATCH_SIZE", "128"))
 
 COLLECTION_NAME = "rag_documents"
 
@@ -79,12 +79,17 @@ def _embed_sentence_transformers(texts: list[str]) -> list[list[float]]:
 
 
 def embed_texts(texts: list[str]) -> list[list[float]]:
-    from sentence_transformers import SentenceTransformer
-    # Initialize the model only once if possible, but here it's fine for the lab
-    # We use a global model to avoid reloading if called multiple times
-    if not hasattr(embed_texts, "model"):
-        embed_texts.model = SentenceTransformer(EMBEDDING_MODEL)
-    return embed_texts.model.encode(texts).tolist()
+    """Embed chủ đề theo EMBEDDING_PROVIDER trong .env (OpenAI API hoặc model local)."""
+    if not texts:
+        return []
+    if EMBEDDING_PROVIDER == "openai":
+        return _embed_openai(texts)
+    if EMBEDDING_PROVIDER in {"sentence_transformers", "sentence-transformers", "local"}:
+        return _embed_sentence_transformers(texts)
+    raise ValueError(
+        f"EMBEDDING_PROVIDER không hỗ trợ: {EMBEDDING_PROVIDER!r}. "
+        "Dùng 'openai' hoặc 'sentence_transformers'."
+    )
 
 
 def get_collection():
