@@ -36,9 +36,31 @@ def embed_texts(texts: list[str]) -> list[list[float]]:
     # TODO: Dispatch theo EMBEDDING_PROVIDER trong .env.
     #
     # Provider local gợi ý:
-    from sentence_transformers import SentenceTransformer
-    model = SentenceTransformer(EMBEDDING_MODEL)
-    return model.encode(texts).tolist()
+    # from sentence_transformers import SentenceTransformer
+    # model = SentenceTransformer(EMBEDDING_MODEL)
+    # return model.encode(texts).tolist()
+    from openai import OpenAI
+
+    load_dotenv(Path(__file__).resolve().parent.parent / ".env")
+
+    if not texts:
+        return []
+
+    vectors = []
+    with OpenAI() as client:
+        for start in range(0, len(texts), EMBEDDING_BATCH_SIZE):
+            response = client.embeddings.create(
+                model=os.getenv(
+                    "EMBEDDING_MODEL", "text-embedding-3-small"
+                ),
+                input=texts[start:start + EMBEDDING_BATCH_SIZE],
+            )
+            vectors.extend(
+                item.embedding
+                for item in sorted(response.data, key=lambda x: x.index)
+            )
+
+    return vectors
     # raise NotImplementedError("Implement embed_texts")
 
 
@@ -126,10 +148,10 @@ def index_to_vectorstore(chunks: list[dict]) -> None:
     # Batch upsert logic could be added here if chunks list is too large, 
     # but for this lab a simple upsert is sufficient
     collection.upsert(
-        ids=ids,
+        ids=[chunk["id"] for chunk in chunks],
         documents=[chunk["content"] for chunk in chunks],
         embeddings=[chunk["embedding"] for chunk in chunks],
-        metadatas=metadatas,
+        metadatas=[chunk["metadata"] for chunk in chunks],
     )
 
 
