@@ -2,7 +2,7 @@
 
 **Source:** https://vietnamnet.vn/ap-thue-20-lai-ban-bat-dong-san-can-lam-ro-can-cu-nao-de-tinh-tien-lai-2425198.html
 
-**Crawled:** 2026-09-20T15:13:18.765549
+**Crawled:** 2026-09-20T15:25:56.025284
 
 ---
 
@@ -275,6 +275,47 @@ Bình luận  ![](https://static.vnncdn.net/v1/icon/chat\(1\).svg)
 
 
 ##  Tin cùng chuyên mục 
+[ ![Cư dân HH Linh Đàm lo chuyện ‘cắt ngọn’ chung cư; siết cho thuê căn hộ theo ngày](https://vietnamnet.vn/ap-thue-20-lai-ban-bat-dong-san-can-lam-ro-can-cu-nao-de-tinh-tien-lai-2425198.html) ](https://vietnamnet.vn/cu-dan-hh-linh-dam-lo-chuyen-cat-ngon-chung-cu-siet-cho-thue-can-ho-theo-ngay-2556972.html "Cư dân HH Linh Đàm lo chuyện ‘cắt ngọn’ chung cư; siết cho thuê căn hộ theo ngày")
+[Thị trường](https://vietnamnet.vn/bat-dong-san/thi-truong "Thị trường")
+###  [ Cư dân HH Linh Đàm lo chuyện ‘cắt ngọn’ chung cư; siết cho thuê căn hộ theo ngày ](https://vietnamnet.vn/cu-dan-hh-linh-dam-lo-chuyen-cat-ngon-chung-cu-siet-cho-thue-can-ho-theo-ngay-2556972.html "Cư dân HH Linh Đàm lo chuyện ‘cắt ngọn’ chung cư; siết cho thuê căn hộ theo ngày")
+Bất động sản tuần qua nổi bật với tin tức Hà Nội lên kế hoạch xử lý các tồn tại, vi phạm tại 12 công trình, dự án nhà ở liên quan doanh nghiệp thuộc hệ sinh thái Tập đoàn Mường Thanh; siết cho thuê căn hộ theo ngày; thị trường nhà phố tại TPHCM. 
+[ ![Chủ đầu tư chậm bàn giao căn hộ 10 năm, người mua ngừng trả tiền](https://vietnamnet.vn/ap-thue-20-lai-ban-bat-dong-san-can-lam-ro-can-cu-nao-de-tinh-tien-lai-2425198.html) ](https://vietnamnet.vn/chu-dau-tu-cham-giao-can-ho-10-nam-nguoi-mua-ngung-tra-tien-2555572.html "Chủ đầu tư chậm bàn giao căn hộ 10 năm, người mua ngừng trả tiền")
+[Thị trường](https://vietnamnet.vn/bat-dong-san/thi-truong "Thị trường")
+###  [ Chủ đầu tư chậm bàn giao căn hộ 10 năm, người mua ngừng trả tiền ](https://vietnamnet.vn/chu-dau-tu-cham-giao-can-ho-10-nam-nguoi-mua-ngung-tra-tien-2555572.html "Chủ đầu tư chậm bàn giao căn hộ 10 năm, người mua ngừng trả tiền")
+Chủ đầu tư chậm giao căn hộ nhiều năm, người mua sau đó ngừng thanh toán. Tòa xác định trách nhiệm của mỗi bên ở từng giai đoạn và buộc hai bên tiếp tục thực hiện hợp đồng. 
+[ ![Lật lại các sai phạm tại những dự án liên quan đại gia Lê Thanh Thản ở Hà Nội](https://vietnamnet.vn/ap-thue-20-lai-ban-bat-dong-san-can-lam-ro-can-cu-nao-de-tinh-tien-lai-2425198.html) ](https://vietnamnet.vn/lat-lai-cac-sai-pham-tai-nhung-du-an-lien-quan-dai-gia-le-thanh-than-o-ha-noi-2556746.html "Lật lại các sai phạm tại những dự án liên quan đại gia Lê Thanh Thản ở Hà Nội")
+[Thị trường](https://vietnamnet.vn/bat-dong-san/thi-truong "Thị trường")
+###  [ Lật lại các sai phạm tại những dự án liên quan đại gia Lê Thanh Thản ở Hà Nội ](https://vietnamnet.vn/lat-lai-cac-sai-pham-tai-nhung-du-an-lien-quan-dai-gia-le-thanh-than-o-ha-noi-2556746.html "Lật lại các sai phạm tại những dự án liên quan đại gia Lê Thanh Thản ở Hà Nội")
+Tập đoàn Mường Thanh gắn với đại gia Lê Thanh Thản vướng hàng loạt sai phạm liên quan tới phòng cháy chữa cháy, xây vượt tầng, tăng số lượng lớn căn hộ... tại nhiều dự án ở Hà Nội. 
+[ ![Môi giới ghi nhầm giá, chủ căn hộ phải bồi thường 200 triệu đồng cho bên mua](https://vietnamnet.vn/ap-thue-20-lai-ban-bat-dong-san-can-lam-ro-can-cu-nao-de-tinh-tien-lai-2425198.html) ](https://vietnamnet.vn/moi-gioi-ghi-nham-gia-chu-can-ho-phai-boi-thuong-200-trieu-dong-cho-ben-mua-2556402.html "Môi giới ghi nhầm giá, chủ căn hộ phải bồi thường 200 triệu đồng cho bên mua")
+[Thị trường](https://vietnamnet.vn/bat-dong-san/thi-truong "Thị trường")
+###  [ Môi giới ghi nhầm giá, chủ căn hộ phải bồi thường 200 triệu đồng cho bên mua ](https://vietnamnet.vn/moi-gioi-ghi-nham-gia-chu-can-ho-phai-boi-thuong-200-trieu-dong-cho-ben-mua-2556402.html "Môi giới ghi nhầm giá, chủ căn hộ phải bồi thường 200 triệu đồng cho bên mua")
+Môi giới ghi nhầm giá căn hộ, bên bán cho rằng đây là lý do khiến giao dịch đổ vỡ và đã hoàn trả tiền cọc. Tuy nhiên, Tòa xác định lỗi khiến hợp đồng không thể tiếp tục thực hiện thuộc về bên bán và người này phải bồi thường 200 triệu đồng. 
+[ ![Nguyên Cục trưởng đề xuất cách xử lý đáng chú ý, không 'cắt ngọn' HH Linh Đàm](https://vietnamnet.vn/ap-thue-20-lai-ban-bat-dong-san-can-lam-ro-can-cu-nao-de-tinh-tien-lai-2425198.html) ](https://vietnamnet.vn/nguyen-cuc-truong-bo-xay-dung-de-xuat-cach-hay-khong-cat-ngon-hh-linh-dam-2556705.html "Nguyên Cục trưởng đề xuất cách xử lý đáng chú ý, không 'cắt ngọn' HH Linh Đàm")
+[Thị trường](https://vietnamnet.vn/bat-dong-san/thi-truong "Thị trường")
+###  [ Nguyên Cục trưởng đề xuất cách xử lý đáng chú ý, không 'cắt ngọn' HH Linh Đàm ](https://vietnamnet.vn/nguyen-cuc-truong-bo-xay-dung-de-xuat-cach-hay-khong-cat-ngon-hh-linh-dam-2556705.html "Nguyên Cục trưởng đề xuất cách xử lý đáng chú ý, không 'cắt ngọn' HH Linh Đàm")
+Về xử lý vi phạm tại chung cư HH Linh Đàm, chuyên gia cho rằng cần hạn chế lãng phí, xáo trộn đời sống cư dân. Có thể giảm mật độ dân số bằng cách chuyển đổi một số tầng để phục vụ cứu nạn, cứu hộ, làm nhà trẻ, nhà để xe... 
+[ ![Gia Lai và cơ hội hình thành một cực tăng trưởng mới của miền Trung](https://vietnamnet.vn/ap-thue-20-lai-ban-bat-dong-san-can-lam-ro-can-cu-nao-de-tinh-tien-lai-2425198.html) ](https://vietnamnet.vn/gia-lai-va-co-hoi-hinh-thanh-mot-cuc-tang-truong-moi-cua-mien-trung-2556594.html "Gia Lai và cơ hội hình thành một cực tăng trưởng mới của miền Trung")
+[Thị trường](https://vietnamnet.vn/bat-dong-san/thi-truong "Thị trường")
+###  [ Gia Lai và cơ hội hình thành một cực tăng trưởng mới của miền Trung ](https://vietnamnet.vn/gia-lai-va-co-hoi-hinh-thanh-mot-cuc-tang-truong-moi-cua-mien-trung-2556594.html "Gia Lai và cơ hội hình thành một cực tăng trưởng mới của miền Trung")
+Sau sáp nhập, Gia Lai mới đang tạo dấu ấn trên bản đồ kinh tế miền Trung khi kết nối lợi thế vùng nguyên liệu cao nguyên với biển, cảng và các trung tâm kinh tế ven biển. 
+[ ![Lý do 92% người có nhu cầu mua nhà ở xã hội chưa từng nộp hồ sơ](https://vietnamnet.vn/ap-thue-20-lai-ban-bat-dong-san-can-lam-ro-can-cu-nao-de-tinh-tien-lai-2425198.html) ](https://vietnamnet.vn/ly-do-92-nguoi-co-nhu-cau-mua-nha-o-xa-hoi-chua-tung-nop-ho-so-2556436.html "Lý do 92% người có nhu cầu mua nhà ở xã hội chưa từng nộp hồ sơ")
+[Thị trường](https://vietnamnet.vn/bat-dong-san/thi-truong "Thị trường")
+###  [ Lý do 92% người có nhu cầu mua nhà ở xã hội chưa từng nộp hồ sơ ](https://vietnamnet.vn/ly-do-92-nguoi-co-nhu-cau-mua-nha-o-xa-hoi-chua-tung-nop-ho-so-2556436.html "Lý do 92% người có nhu cầu mua nhà ở xã hội chưa từng nộp hồ sơ")
+Dù nhu cầu nhà ở xã hội rất lớn, nhưng 92% người được khảo sát có nhu cầu mua vẫn chưa từng nộp hồ sơ, chủ yếu do tâm lý ngại thủ tục phức tạp và lo khó được xét duyệt. 
+[ ![Khách trả 1,66 tỷ mua căn hộ gần 2,4 tỷ, chờ hơn 1 năm chưa được nhận nhà](https://vietnamnet.vn/ap-thue-20-lai-ban-bat-dong-san-can-lam-ro-can-cu-nao-de-tinh-tien-lai-2425198.html) ](https://vietnamnet.vn/khach-tra-1-66-ty-mua-can-ho-gan-2-4-ty-cho-hon-1-nam-chua-duoc-nhan-nha-2556030.html "Khách trả 1,66 tỷ mua căn hộ gần 2,4 tỷ, chờ hơn 1 năm chưa được nhận nhà")
+[Thị trường](https://vietnamnet.vn/bat-dong-san/thi-truong "Thị trường")
+###  [ Khách trả 1,66 tỷ mua căn hộ gần 2,4 tỷ, chờ hơn 1 năm chưa được nhận nhà ](https://vietnamnet.vn/khach-tra-1-66-ty-mua-can-ho-gan-2-4-ty-cho-hon-1-nam-chua-duoc-nhan-nha-2556030.html "Khách trả 1,66 tỷ mua căn hộ gần 2,4 tỷ, chờ hơn 1 năm chưa được nhận nhà")
+Đã thanh toán 70% giá trị căn hộ nhưng khi đến nghiệm thu, người mua phát hiện nhiều hạng mục vẫn chưa hoàn thiện. Chủ đầu tư cho rằng căn hộ đã đủ điều kiện bàn giao, trong khi người mua yêu cầu chấm dứt hợp đồng. 
+[ ![Chủ nhà phố ở TPHCM rao bán 36 tỷ, khách chỉ muốn mua 31-32 tỷ](https://vietnamnet.vn/ap-thue-20-lai-ban-bat-dong-san-can-lam-ro-can-cu-nao-de-tinh-tien-lai-2425198.html) ](https://vietnamnet.vn/chu-nha-pho-tphcm-rao-ban-36-ty-khach-chi-muon-mua-31-32-ty-2556012.html "Chủ nhà phố ở TPHCM rao bán 36 tỷ, khách chỉ muốn mua 31-32 tỷ")
+[Thị trường](https://vietnamnet.vn/bat-dong-san/thi-truong "Thị trường")
+###  [ Chủ nhà phố ở TPHCM rao bán 36 tỷ, khách chỉ muốn mua 31-32 tỷ ](https://vietnamnet.vn/chu-nha-pho-tphcm-rao-ban-36-ty-khach-chi-muon-mua-31-32-ty-2556012.html "Chủ nhà phố ở TPHCM rao bán 36 tỷ, khách chỉ muốn mua 31-32 tỷ")
+Giá rao bán nhà phố tại TPHCM vẫn ở mức cao, trong khi người mua có xu hướng chờ giá điều chỉnh mới xuống tiền. Khoảng cách giữa mức giá kỳ vọng và khả năng chi trả thực tế ngày càng lớn, khiến nhiều giao dịch chưa thể chốt. 
+[ ![Mua căn hộ 122m2, chủ nhà đòi lại tiền 9m2 cột, hộp kỹ thuật, tường bao](https://vietnamnet.vn/ap-thue-20-lai-ban-bat-dong-san-can-lam-ro-can-cu-nao-de-tinh-tien-lai-2425198.html) ](https://vietnamnet.vn/mua-can-ho-122m2-chu-nha-doi-lai-tien-9m2-cot-hop-ky-thuat-tuong-bao-2555609.html "Mua căn hộ 122m2, chủ nhà đòi lại tiền 9m2 cột, hộp kỹ thuật, tường bao")
+[Thị trường](https://vietnamnet.vn/bat-dong-san/thi-truong "Thị trường")
+###  [ Mua căn hộ 122m2, chủ nhà đòi lại tiền 9m2 cột, hộp kỹ thuật, tường bao ](https://vietnamnet.vn/mua-can-ho-122m2-chu-nha-doi-lai-tien-9m2-cot-hop-ky-thuat-tuong-bao-2555609.html "Mua căn hộ 122m2, chủ nhà đòi lại tiền 9m2 cột, hộp kỹ thuật, tường bao")
+Mua căn hộ 122m2, một người đàn ông ở Nghệ An cho rằng 9,1m2 gồm cột, hộp kỹ thuật và phần tường bao đã bị tính vào giá bán. Nút thắt của vụ án nằm ở cách xác định diện tích căn hộ theo tim tường hay thông thủy. 
+Xem thêm tin ![icon loading](https://static.vnncdn.net/v1/icon/infonet/loading.svg)
 ##  Tin mới 
 ##  [ Dự án ](https://vietnamnet.vn/bat-dong-san/du-an "Dự án")
 [ ![](https://vietnamnet.vn/ap-thue-20-lai-ban-bat-dong-san-can-lam-ro-can-cu-nao-de-tinh-tien-lai-2425198.html) ![icon avatar](https://static-images.vnncdn.net/files/2023/4/8/photo-icon.svg) ](https://vietnamnet.vn/can-canh-khu-dat-vang-san-chi-lang-giam-hon-620-ty-dong-van-e-khach-2553229.html "Sân Chi Lăng tan hoang, khu đất ‘tứ giác vàng’ 9.080 tỷ vẫn chưa có người mua")
@@ -372,4 +413,4 @@ Không chỉ đơn thuần là đặt vật phẩm may mắn, phong thủy cầu
 ![](https://tracking3.vnncdn.net/tracking/detail?id=2425198&w=000003)
 1  / 1 
 ![](https://static-images.vnncdn.net/vps_images_publish/000001/000003/2025/7/24/w-thue-bat-dong-san-1383.jpg?width=260&s=bhPROSz_xMWvXdwTWdnaCg)
-![](https://track-srv.vietnamnet.vn/jsx/trackingv3/pageview/data.jsx?Url=https%3A%2F%2Fvietnamnet.vn%2Fap-thue-20-lai-ban-bat-dong-san-can-lam-ro-can-cu-nao-de-tinh-tien-lai-2425198.html&action=view&randId=8899&domain=vietnamnet.vn&catealias=bat-dong-san&aid=2425198)
+![](https://track-srv.vietnamnet.vn/jsx/trackingv3/pageview/data.jsx?Url=https%3A%2F%2Fvietnamnet.vn%2Fap-thue-20-lai-ban-bat-dong-san-can-lam-ro-can-cu-nao-de-tinh-tien-lai-2425198.html&action=view&randId=3592&domain=vietnamnet.vn&catealias=bat-dong-san&aid=2425198)

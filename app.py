@@ -1,12 +1,12 @@
 import streamlit as st
 from dotenv import load_dotenv
-
+from src.task10_generation import generate_with_citation
 
 load_dotenv()
 
 st.set_page_config(
-    page_title="RAG Chatbot",
-    page_icon="",
+    page_title="Hỏi đáp Luật & Thuế",
+    page_icon="⚖️",
     layout="wide",
 )
 
@@ -14,19 +14,23 @@ if "messages" not in st.session_state:
     st.session_state.messages = []
 
 with st.sidebar:
-    st.title("RAG Chatbot")
-    st.caption("Thay mô tả theo đề tài của nhóm")
-    top_k = st.slider("Số chunks", 3, 10, 5)
+    st.title("⚖️ Hệ thống RAG")
+    st.caption("Tra cứu văn bản Pháp luật và Tin tức về Thuế")
+    top_k = st.slider("Số lượng tài liệu trích xuất (Chunks)", 3, 10, 5)
 
-st.title("RAG Chatbot")
-st.caption("Thay tiêu đề và hướng dẫn sử dụng")
+st.title("Trợ lý Pháp lý & Thuế 🤖")
+st.caption("Hãy đặt câu hỏi về Luật, Dự thảo Luật hoặc Thuế Doanh nghiệp. Hệ thống sẽ trích xuất từ dữ liệu nội bộ để trả lời.")
 
 for message in st.session_state.messages:
     with st.chat_message(message["role"]):
         st.markdown(message["content"])
-        # TODO: Hiển thị sources và retrieval score.
+        if "sources" in message and message["sources"]:
+            with st.expander("📚 Nguồn trích dẫn"):
+                for src in message["sources"]:
+                    st.caption(f"**[{src.get('retrieval_method', 'N/A').upper()}]** Nguồn: `{src['metadata'].get('source', 'Unknown')}` (Score: {src.get('score', 0):.4f})")
+                    st.text(src['content'][:200] + "...")
 
-query = st.chat_input("Nhập câu hỏi...")
+query = st.chat_input("Ví dụ: Mức phạt chậm nộp thuế là bao nhiêu?")
 
 if query:
     st.session_state.messages.append({"role": "user", "content": query})
@@ -35,11 +39,21 @@ if query:
         st.markdown(query)
 
     with st.chat_message("assistant"):
-        # TODO: Gọi generate_with_citation(query, top_k).
-        answer = "TODO: Itegration RAG Pipeline hêre"
-        sources = []
+        with st.spinner("Đang tra cứu cơ sở dữ liệu..."):
+            try:
+                result = generate_with_citation(query, top_k=top_k)
+                answer = result["answer"]
+                sources = result.get("sources", [])
+            except Exception as e:
+                answer = f"Lỗi hệ thống: {str(e)}"
+                sources = []
+        
         st.markdown(answer)
+        
+        if sources:
+            with st.expander("📚 Nguồn trích dẫn"):
+                for src in sources:
+                    st.caption(f"**[{src.get('retrieval_method', 'N/A').upper()}]** Nguồn: `{src['metadata'].get('source', 'Unknown')}` (Score: {src.get('score', 0):.4f})")
+                    st.text(src['content'][:200] + "...")
 
-        # TODO: Hiển thị sources và citation.
-
-    # TODO: Lưu answer và sources vào session state.
+    st.session_state.messages.append({"role": "assistant", "content": answer, "sources": sources})
