@@ -16,9 +16,8 @@ def rerank_rrf(
     k: int = 60,
 ) -> list[dict]:
     """Fuse nhiều ranked lists và trả hybrid SearchResult."""
-    scores: dict[str, float] = {}
-    items: dict[str, dict] = {}
-
+    scores = {}
+    items = {}
     for ranked_list in ranked_lists:
         for rank, item in enumerate(ranked_list, 1):
             item_id = item["id"]
@@ -26,7 +25,7 @@ def rerank_rrf(
             items[item_id] = item
 
     ranked_ids = sorted(scores, key=scores.get, reverse=True)
-    results: list[dict] = []
+    results = []
     for item_id in ranked_ids[:top_k]:
         result = items[item_id].copy()
         result["score"] = scores[item_id]

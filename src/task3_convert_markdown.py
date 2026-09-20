@@ -21,8 +21,6 @@ OUTPUT_DIR = Path(__file__).parent.parent / "data" / "standardized"
 
 
 def convert_legal_docs() -> None:
-    # TODO:Convert PDF/DOCX vào standardized/legal. 
-    #
     from markitdown import MarkItDown
     legal_dir = LANDING_DIR / "legal"
     output_dir = OUTPUT_DIR / "legal"
@@ -34,12 +32,9 @@ def convert_legal_docs() -> None:
             (output_dir / f"{path.stem}.md").write_text(
                 result.text_content, encoding="utf-8"
             )
-    # raise NotImplementedError("Implement convert_legal_docs")
 
 
 def convert_news_articles() -> None:
-    # TODO: Convert JSON vào standardized/news.
-    #
     import json
     news_dir = LANDING_DIR / "news"
     output_dir = OUTPUT_DIR / "news"
@@ -52,9 +47,8 @@ def convert_news_articles() -> None:
             f"**Crawled:** {data['date_crawled']}\n\n---\n\n"
         )
         (output_dir / f"{path.stem}.md").write_text(
-            header + data["content_markdown"], encoding="utf-8"
+            header + data.get("content_markdown", ""), encoding="utf-8"
         )
-    # raise NotImplementedError("Implement convert_news_articles")
 
 
 def convert_all() -> None:

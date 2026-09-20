@@ -2,7 +2,7 @@
 
 **Source:** https://mva.vn/bo-thue-khoan-ho-kinh-doanh-tu-nam-2026/
 
-**Crawled:** 2026-09-20T15:13:23.413088
+**Crawled:** 2026-09-20T15:25:59.174869
 
 ---
 
@@ -347,7 +347,6 @@ Email: dungtq.mva@gmail.com
 Phản ánh CLDV: 058.614.9999
 Theo dõi chúng tôi
 [](https://www.facebook.com/dichvuketoanMVA "Theo dõi trên Facebook")[](https://www.tiktok.com/@mvavietnamgroup "Theo dõi trên TikTok")[](https://mva.vn/bo-thue-khoan-ho-kinh-doanh-tu-nam-2026/ "Theo dõi trên Twitter")[](https://www.youtube.com/@MVA-VietNam "Theo dõi trên YouTube")
-> [THÀNH LẬP CÔNG TY](https://www.facebook.com/dichvuketoanMVA)
 ![](https://mva.vn/wp-content/uploads/2023/10/logo-da-thong-bao-bo-cong-thuong-mau-xanh.png)
 Sơ đồ đường đi
   * [Giới thiệu](https://mva.vn/gioi-thieu/)

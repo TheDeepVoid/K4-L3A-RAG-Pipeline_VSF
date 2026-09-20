@@ -2,14 +2,37 @@
 
 **Source:** https://cafef.vn/cu-soc-thue-voi-tiep-thi-lien-ket-nhan-ve-tui-3-ty-dong-nhung-bi-truy-thue-gan-700-trieu-dong-vi-ly-do-sau-day-188260509162820923.chn
 
-**Crawled:** 2026-09-20T15:13:10.643260
+**Crawled:** 2026-09-20T15:25:49.660626
 
 ---
 
 [](https://cafef.vn/ "Kênh thông tin kinh tế - tài chính Việt Nam")
+  * Chọn mã CK  
+cần theo dõi
+  * Chọn mã CK  
+cần theo dõi
+  * Chọn mã CK  
+cần theo dõi
+  * Chọn mã CK  
+cần theo dõi
+  * Chọn mã CK  
+cần theo dõi
+  * Chọn mã CK  
+cần theo dõi
+  * Chọn mã CK  
+cần theo dõi
+
+[](javascript:;)
+[](javascript:;)
+[Xóa toàn bộ](javascript:;)
 [Bảng giá điện tử](http://liveboard.cafef.vn "Bảng giá điện tử") [Danh mục đầu tư](https://cafef.vn/du-lieu/danh-muc-dau-tu.chn "Danh mục đầu tư")
 MỚI NHẤT!
 [Đọc nhanh >>](https://cafef.vn/doc-nhanh.chn "Đọc nhanh")
+  * 15:23 [ Hồ sơ vụ cướp ở sân bay gây rúng động ](https://cafef.vn/ho-so-vu-cuop-o-san-bay-gay-rung-dong-188260920143909293.chn "Hồ sơ vụ cướp ở sân bay gây rúng động")
+  * 15:22 [ Người phụ nữ 37 tuổi cải tạo căn hộ 45m² thành nơi ai cũng muốn ghé: Không điều hòa, ít dùng điện thoại, đồ cũ cũng thành đẹp ](https://cafef.vn/nguoi-phu-nu-37-tuoi-cai-tao-can-ho-45m-thanh-noi-ai-cung-muon-ghe-khong-dieu-hoa-it-dung-dien-thoai-do-cu-cung-thanh-dep-188260920132229907.chn "Người phụ nữ 37 tuổi cải tạo căn hộ 45m² thành nơi ai cũng muốn ghé: Không điều hòa, ít dùng điện thoại, đồ cũ cũng thành đẹp")
+  * 15:20 [ Rầm rộ thi công cầu Đuống mới dự kiến hoàn thành cuối năm 2026 ](https://cafef.vn/ram-ro-thi-cong-cau-duong-moi-du-kien-hoan-thanh-cuoi-nam-2026-188260920142454676.chn "Rầm rộ thi công cầu Đuống mới dự kiến hoàn thành cuối năm 2026")
+  * 15:18 [ Người dân chú ý thông báo quan trọng liên quan đến giấy đăng ký xe ](https://cafef.vn/nguoi-dan-chu-y-thong-bao-quan-trong-lien-quan-den-giay-dang-ky-xe-188260919174354591.chn "Người dân chú ý thông báo quan trọng liên quan đến giấy đăng ký xe")
+  * 15:16 [ Lời khuyên cho những gia đình đặt bàn thờ trong phòng khách ](https://cafef.vn/loi-khuyen-cho-nhung-gia-dinh-dat-ban-tho-trong-phong-khach-18826092012494736.chn "Lời khuyên cho những gia đình đặt bàn thờ trong phòng khách")
   * 15:12 [ TPHCM đề xuất chi hơn 31.500 tỷ đồng chỉnh trang bờ Nam kênh Đôi ](https://cafef.vn/tphcm-de-xuat-chi-hon-31500-ty-dong-chinh-trang-bo-nam-kenh-doi-188260920130134455.chn "TPHCM đề xuất chi hơn 31.500 tỷ đồng chỉnh trang bờ Nam kênh Đôi")
   * 15:10 [ Phát hiện cặp vợ chồng sở hữu hơn 100 BĐS cho thuê, thu về 54 tỷ đồng/năm ](https://cafef.vn/phat-hien-cap-vo-chong-so-huu-hon-100-bds-cho-thue-thu-ve-54-ty-dong-nam-188260920150022177.chn "Phát hiện cặp vợ chồng sở hữu hơn 100 BĐS cho thuê, thu về 54 tỷ đồng/năm")
   * 15:10 [ Bác sĩ mắt chỉ điểm 10 thực phẩm tốt cho mắt: Ăn loại thực phẩm này mỗi tuần có thể giảm nguy cơ thoái hóa điểm vàng đến 62% ](https://cafef.vn/bac-si-mat-chi-diem-10-thuc-pham-tot-cho-mat-an-loai-thuc-pham-nay-moi-tuan-co-the-giam-nguy-co-thoai-hoa-diem-vang-den-62-188260920133239462.chn "Bác sĩ mắt chỉ điểm 10 thực phẩm tốt cho mắt: Ăn loại thực phẩm này mỗi tuần có thể giảm nguy cơ thoái hóa điểm vàng đến 62%")
@@ -25,11 +48,6 @@ MỚI NHẤT!
   * 14:42 [ Cận cảnh những ngôi nhà thời thơ ấu của các tỷ phú thế giới ](https://cafef.vn/can-canh-nhung-ngoi-nha-thoi-tho-au-cua-cac-ty-phu-the-gioi-188260920142007592.chn "Cận cảnh những ngôi nhà thời thơ ấu của các tỷ phú thế giới")
   * 14:40 [ Sống đến 70 tuổi vẫn khỏe mạnh và minh mẫn? Một nghiên cứu kéo dài 30 năm của Harvard tiết lộ 7 loại thực phẩm bạn nên ăn thường xuyên ](https://cafef.vn/song-den-70-tuoi-van-khoe-manh-va-minh-man-mot-nghien-cuu-keo-dai-30-nam-cua-harvard-tiet-lo-7-loai-thuc-pham-ban-nen-an-thuong-xuyen-188260920131712837.chn "Sống đến 70 tuổi vẫn khỏe mạnh và minh mẫn? Một nghiên cứu kéo dài 30 năm của Harvard tiết lộ 7 loại thực phẩm bạn nên ăn thường xuyên")
   * 14:30 [ Tất cả người dân dùng máy tính, laptop chú ý quy định phạt tiền tới 100 triệu đồng ](https://cafef.vn/tat-ca-nguoi-dan-dung-may-tinh-laptop-chu-y-quy-dinh-phat-tien-toi-100-trieu-dong-188260919174527534.chn "Tất cả người dân dùng máy tính, laptop chú ý quy định phạt tiền tới 100 triệu đồng")
-  * 14:24 [ Trung tâm dữ liệu AI đặt áp lực lên hạ tầng Mỹ ](https://cafef.vn/trung-tam-du-lieu-ai-dat-ap-luc-len-ha-tang-my-188260920133705474.chn "Trung tâm dữ liệu AI đặt áp lực lên hạ tầng Mỹ")
-  * 14:19 [ Honda 'tất tay' với xe hybrid, hé lộ về CR-V đời mới ](https://cafef.vn/honda-tat-tay-voi-xe-hybrid-he-lo-ve-cr-v-doi-moi-188260920131934137.chn "Honda 'tất tay' với xe hybrid, hé lộ về CR-V đời mới")
-  * 14:15 [ Nước đồng minh của Mỹ rút khỏi hệ thống thanh toán phi đô la hóa do Trung Quốc dẫn đầu ](https://cafef.vn/nuoc-dong-minh-cua-my-rut-khoi-he-thong-thanh-toan-phi-do-la-hoa-do-trung-quoc-dan-dau-188260920141201655.chn "Nước đồng minh của Mỹ rút khỏi hệ thống thanh toán phi đô la hóa do Trung Quốc dẫn đầu")
-  * 14:12 [ Phát hiện thần đồng 13 tuổi được ví như "Elon Musk tương lai", video học tiếng Anh bằng AI thu hút 20 triệu lượt xem ](https://cafef.vn/phat-hien-than-dong-13-tuoi-duoc-vi-nhu-elon-musk-tuong-lai-video-hoc-tieng-anh-bang-ai-thu-hut-20-trieu-luot-xem-188260920131314065.chn "Phát hiện thần đồng 13 tuổi được ví như "Elon Musk tương lai", video học tiếng Anh bằng AI thu hút 20 triệu lượt xem")
-  * 14:10 [ Đề án cải cách tiền lương dự kiến được Trung ương thông qua vào tháng 3/2027 ](https://cafef.vn/de-an-cai-cach-tien-luong-du-kien-duoc-trung-uong-thong-qua-vao-thang-3-2027-188260920133311212.chn "Đề án cải cách tiền lương dự kiến được Trung ương thông qua vào tháng 3/2027")
 
 
   * [](https://cafef.vn/ "Trang chủ")
@@ -51,6 +69,9 @@ Tài chính - Chứng khoán [Chứng khoán](https://cafef.vn/thi-truong-chung-
 Bất động sản [Tin tức](https://cafef.vn/bat-dong-san.chn "tin tức") [Dự án](https://cafef.vn/du-an.chn "dự án") [Bản đồ dự án](https://cafef.vn/ban-do-du-an.chn "bản đồ dự án")
 Khác [Hàng hóa nguyên liệu](https://cafef.vn/hang-hoa-nguyen-lieu.chn "hàng hóa nguyên liệu") [Sống](https://cafef.vn/song.chn "sống") [Lifestyle](https://cafef.vn/lifestyle.chn "Lifestyle")
 CHỦ ĐỀ NÓNG
+    * [AGM Awards](https://cafef.vn/su-kien/agm-awards-1083.chn "AGM Awards")
+    * [Tâm điểm hàng hiệu](https://cafef.vn/su-kien/tam-diem-hang-hieu-1102.chn "Tâm điểm hàng hiệu")
+    * [Dấu ấn thập kỷ](https://cafef.vn/su-kien/dau-an-thap-ky-1091.chn "Dấu ấn thập kỷ")
 [Magazine](https://cafef.vn/nhom-chu-de/emagazine.chn)
   * [Dữ liệu](https://cafef.vn/du-lieu.chn "Dữ liệu")
   * [F INDEX](https://cafef.vn/du-lieu/cafeflists.chn "F INDEX")
@@ -104,7 +125,7 @@ Xem theo ngày Ngày 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23
 ####  [ Lập Hội đồng thẩm định Báo cáo nghiên cứu tiền khả thi cao tốc Bảo Hà - Lai Châu](https://cafef.vn/lap-hoi-dong-tham-dinh-bao-cao-nghien-cuu-tien-kha-thi-cao-toc-bao-ha-lai-chau-18826091907291809.chn "Lập Hội đồng thẩm định Báo cáo nghiên cứu tiền khả thi cao tốc Bảo Hà - Lai Châu") Nổi bật
 [ ![Diện mạo siêu nút giao kết nối 2 cao tốc huyết mạch ở phía Nam](https://cafefcdn.com/zoom/223_140/203337114487263232/2026/9/20/avatar1789885897848-1789885898506582181444.jpg) ](https://cafef.vn/dien-mao-sieu-nut-giao-ket-noi-2-cao-toc-huyet-mach-o-phia-nam-188260920133201024.chn "Diện mạo siêu nút giao kết nối 2 cao tốc huyết mạch ở phía Nam")
 ####  [ Diện mạo siêu nút giao kết nối 2 cao tốc huyết mạch ở phía Nam](https://cafef.vn/dien-mao-sieu-nut-giao-ket-noi-2-cao-toc-huyet-mach-o-phia-nam-188260920133201024.chn "Diện mạo siêu nút giao kết nối 2 cao tốc huyết mạch ở phía Nam")
-28 phút trước
+41 phút trước
 [ ![Đề án cải cách tiền lương dự kiến được Trung ương thông qua vào tháng 3/2027](https://cafefcdn.com/zoom/223_140/203337114487263232/2026/9/20/avatar1789885970317-17898859780911760639373.jpg) ](https://cafef.vn/de-an-cai-cach-tien-luong-du-kien-duoc-trung-uong-thong-qua-vao-thang-3-2027-188260920133311212.chn "Đề án cải cách tiền lương dự kiến được Trung ương thông qua vào tháng 3/2027")
 ####  [ Đề án cải cách tiền lương dự kiến được Trung ương thông qua vào tháng 3/2027](https://cafef.vn/de-an-cai-cach-tien-luong-du-kien-duoc-trung-uong-thong-qua-vao-thang-3-2027-188260920133311212.chn "Đề án cải cách tiền lương dự kiến được Trung ương thông qua vào tháng 3/2027")
 1 giờ trước
