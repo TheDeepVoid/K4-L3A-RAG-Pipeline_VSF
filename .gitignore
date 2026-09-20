@@ -38,6 +38,10 @@ htmlcov/
 # Temp PDF conversion cache
 data/_tmp_pdf/
 
+# Vectors DB (derived data; rebuilt by task4 -> do not track)
+chroma_db/
+chroma_db_*/
+
 # Temp / cache
 .pytest_cache/
 *.tmp
