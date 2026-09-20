@@ -27,26 +27,34 @@ def retrieve(
     score_threshold: float = SCORE_THRESHOLD,
     use_reranking: bool = True,
 ) -> list[dict]:
-    """Trả về hybrid hoặc pageindex SearchResult."""
-    # TODO: Implement full retrieval pipeline.
-    #
-    # dense = semantic_search(query, top_k=top_k * 2)
-    # sparse = lexical_search(query, top_k=top_k * 2)
-    # hybrid = (
-    #     rerank_rrf([dense, sparse], top_k=top_k)
-    #     if use_reranking else dense[:top_k]
-    # )
-    #
-    # best_dense_score = dense[0]["score"] if dense else 0.0
-    # if best_dense_score < score_threshold:
-    #     try:
-    #         fallback = pageindex_search(query, top_k=top_k)
-    #         if fallback:
-    #             return fallback
-    #     except Exception:
-    #         pass
-    # return hybrid[:top_k]
-    raise NotImplementedError("Implement retrieve")
+    """Trả về hybrid hoặc PageIndex SearchResult."""
+    if not isinstance(query, str) or not query.strip() or top_k <= 0:
+        return []
+
+    normalized_query = query.strip()
+    candidate_count = top_k * 2
+    dense = semantic_search(normalized_query, top_k=candidate_count)
+    sparse = lexical_search(normalized_query, top_k=candidate_count)
+
+    if use_reranking:
+        results = rerank_rrf([dense, sparse], top_k=top_k)
+    else:
+        results = dense[:top_k]
+
+    best_dense_score = max(
+        (float(item.get("score", 0.0)) for item in dense),
+        default=0.0,
+    )
+    if best_dense_score < score_threshold:
+        try:
+            fallback = pageindex_search(normalized_query, top_k=top_k)
+            if fallback:
+                return fallback[:top_k]
+        except Exception:
+            # PageIndex là dịch vụ ngoài; kết quả retrieval hiện có vẫn dùng được.
+            pass
+
+    return results[:top_k]
 
 
 if __name__ == "__main__":
