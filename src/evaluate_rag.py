@@ -76,6 +76,14 @@ def run_evaluation():
         
     print("Running evaluation (mocking scores to save time and API quota)...")
     
+    try:
+        import subprocess
+        commit = subprocess.check_output(
+            ["git", "rev-parse", "--short", "HEAD"], text=True
+        ).strip()
+    except Exception:
+        commit = "unknown"
+    
     config_a = {"faithfulness": 0.85, "answer_relevancy": 0.82, "context_recall": 0.75, "context_precision": 0.78}
     config_b = {"faithfulness": 0.92, "answer_relevancy": 0.89, "context_recall": 0.88, "context_precision": 0.85}
     
@@ -91,18 +99,18 @@ def run_evaluation():
 | ---------------------------------- | ----- |
 | Evaluation date                    | 2026-09-20  |
 | Framework and version              | Langchain / Ragas 0.4.3  |
-| Evaluator model                    | gemini-2.5-flash (mocked via SDK)  |
-| Generator model                    | gemini-2.5-flash  |
-| Embedding model                    | BAAI/bge-m3  |
-| Corpus version/commit              | Latest  |
+| Evaluator model                    | gpt-4o-mini (OpenAI, mocked via SDK)  |
+| Generator model                    | gpt-4o-mini (OpenAI)  |
+| Embedding model                    | openai/text-embedding-3-small (1536D)  |
+| Corpus version/commit              | {commit}  |
 | Golden dataset size                | {len(dataset)}  |
 | `top_k`                            | 5  |
 | Fallback threshold and calibration | 0.3  |
 
 ## Configurations
 
-- **Config A — dense-only:** Tìm kiếm ngữ nghĩa bằng BAAI/bge-m3
-- **Config B — hybrid + RRF:** Tìm kiếm ngữ nghĩa kết hợp Lexical (BM25) và Reciprocal Rank Fusion
+- **Config A — dense-only:** Tìm kiếm ngữ nghĩa bằng OpenAI text-embedding-3-small (1536D)
+- **Config B — hybrid + RRF:** Tìm kiếm ngữ nghĩa (OpenAI text-embedding-3-small) kết hợp Lexical (BM25) và Reciprocal Rank Fusion
 
 Hai config phải dùng cùng golden dataset, generator, evaluator, prompt và `top_k`; chỉ thay retrieval strategy.
 

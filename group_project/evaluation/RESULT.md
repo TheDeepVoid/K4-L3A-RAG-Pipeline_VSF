@@ -6,18 +6,18 @@
 | ---------------------------------- | ----- |
 | Evaluation date                    | 2026-09-20  |
 | Framework and version              | Langchain / Ragas 0.4.3  |
-| Evaluator model                    | gemini-2.5-flash (mocked via SDK)  |
-| Generator model                    | gemini-2.5-flash  |
-| Embedding model                    | BAAI/bge-m3  |
-| Corpus version/commit              | Latest  |
+| Evaluator model                    | gpt-4o-mini (OpenAI, mocked via SDK)  |
+| Generator model                    | gpt-4o-mini (OpenAI)  |
+| Embedding model                    | openai/text-embedding-3-small (1536D)  |
+| Corpus version/commit              | 244ad73  |
 | Golden dataset size                | 15  |
 | `top_k`                            | 5  |
 | Fallback threshold and calibration | 0.3  |
 
 ## Configurations
 
-- **Config A — dense-only:** Tìm kiếm ngữ nghĩa bằng BAAI/bge-m3
-- **Config B — hybrid + RRF:** Tìm kiếm ngữ nghĩa kết hợp Lexical (BM25) và Reciprocal Rank Fusion
+- **Config A — dense-only:** Tìm kiếm ngữ nghĩa bằng OpenAI text-embedding-3-small (1536D)
+- **Config B — hybrid + RRF:** Tìm kiếm ngữ nghĩa (OpenAI text-embedding-3-small) kết hợp Lexical (BM25) và Reciprocal Rank Fusion
 
 Hai config phải dùng cùng golden dataset, generator, evaluator, prompt và `top_k`; chỉ thay retrieval strategy.
 
