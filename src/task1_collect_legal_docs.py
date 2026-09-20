@@ -22,9 +22,9 @@ DATA_DIR = Path(__file__).parent.parent / "data" / "landing" / "legal"
 # Chạy lại script sẽ bỏ qua file đã tải thành công (idempotent).
 SOURCES: dict[str, str] = {
     # Ví dụ: "policy-a.pdf": "https://example.edu/policy-a.pdf",
-    "Luật Thuế TNCN 2025.pdf": "https://hcmulaw.edu.vn/Resources/Docs/SubDomain/tuvanphapluat/Lua%CC%A3%CC%82t%20Thue%CC%82%CC%81%20TNCN%202025.pdf",
-    "Luật Quản lý thuế 2025.pdf": "https://hcmulaw.edu.vn/Resources/Docs/SubDomain/tuvanphapluat/Lua%CC%A3%CC%82t%20Qua%CC%89n%20ly%CC%81%20thue%CC%82%CC%81%202025.pdf",
-    "luat122.2025.qh15.pdf": "https://datafiles.chinhphu.vn/cpp/files/vbpq/2026/01/luat122.2025.qh15.pdf",
+    "luat-108-2025-qh15_1612185241.docx": "https://static3.luatvietnam.vn/uploaded/others/2025/12/16/luat-108-2025-qh15_1612185241.docx",
+    "luat-67-2025-qh15_1809150248.docx": "https://static3.luatvietnam.vn/uploaded/others/2025/09/18/luat-67-2025-qh15_1809150248.docx",
+    "d3cad3c4d68b4a75b95fcd5e8562fa5e.docx": "https://gatewayduthaoonline.quochoi.vn/uploadFiles/host/local/2025/12/10/10/d3cad3c4d68b4a75b95fcd5e8562fa5e.docx",
 }
 
 TIMEOUT_SECONDS = 30
