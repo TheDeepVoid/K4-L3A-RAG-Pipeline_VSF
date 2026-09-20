@@ -13,14 +13,37 @@ Nếu website chặn crawler, hãy chọn nguồn công khai khác; không vư�
 
 from pathlib import Path
 
+import requests
+
 
 DATA_DIR = Path(__file__).parent.parent / "data" / "landing" / "legal"
+
+# Điền tối thiểu 3 cặp "tên file (không dấu)" -> "URL công khai".
+# Chạy lại script sẽ bỏ qua file đã tải thành công (idempotent).
+SOURCES: dict[str, str] = {
+    # Ví dụ: "policy-a.pdf": "https://example.edu/policy-a.pdf",
+    "luat-108-2025-qh15_1612185241.docx": "https://static3.luatvietnam.vn/uploaded/others/2025/12/16/luat-108-2025-qh15_1612185241.docx",
+    "luat-67-2025-qh15_1809150248.docx": "https://static3.luatvietnam.vn/uploaded/others/2025/09/18/luat-67-2025-qh15_1809150248.docx",
+    "d3cad3c4d68b4a75b95fcd5e8562fa5e.docx": "https://gatewayduthaoonline.quochoi.vn/uploadFiles/host/local/2025/12/10/10/d3cad3c4d68b4a75b95fcd5e8562fa5e.docx",
+}
+
+TIMEOUT_SECONDS = 30
+USER_AGENT = (
+    "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 "
+    "(KHTML, like Gecko) Chrome/124.0 Safari/537.36"
+)
 
 
 def setup_directory() -> None:
     """Tạo thư mục lưu tài liệu gốc."""
     DATA_DIR.mkdir(parents=True, exist_ok=True)
     print(f"Ready: {DATA_DIR}")
+
+
+def _looks_like_html(content: bytes) -> bool:
+    """Nhận diện trang HTML trả về thay vì file PDF/DOCX."""
+    head = content[:512].lstrip().lower()
+    return head.startswith(b"<html") or head.startswith(b"<!doctype")
 
 
 def download_documents() -> None:

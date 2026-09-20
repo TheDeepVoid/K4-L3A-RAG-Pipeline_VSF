@@ -23,12 +23,18 @@ load_dotenv()
 TOP_K = 5
 TOP_P = 0.9
 TEMPERATURE = 0.3
+MAX_OUTPUT_TOKENS = 2048
 
 LLM_PROVIDER = os.getenv("LLM_PROVIDER", "openai")
 LLM_MODEL = os.getenv("LLM_MODEL", "")
 
-SYSTEM_PROMPT = """Trả lời chỉ từ context được cung cấp.
-Mỗi khẳng định phải có citation. Nếu thiếu evidence, hãy từ chối xác minh."""
+SAFE_REFUSAL = "Tôi không thể xác minh thông tin này từ nguồn hiện có."
+SYSTEM_PROMPT = """Bạn là trợ lý hỏi đáp dựa trên tài liệu.
+Chỉ trả lời từ context được cung cấp và không bổ sung thông tin bên ngoài.
+Sau mỗi khẳng định, trích dẫn một hoặc nhiều nguồn bằng đúng token [Source: <id>]
+có trong context. Nếu context không đủ evidence, chỉ trả lời câu từ chối được
+cung cấp trong hướng dẫn của người dùng.
+"""
 
 
 def reorder_for_llm(chunks: list[dict]) -> list[dict]:
