@@ -15,31 +15,42 @@ Cài browser trước khi chạy:
 
 import asyncio
 import json
+from datetime import datetime
 from pathlib import Path
 
 
 DATA_DIR = Path(__file__).parent.parent / "data" / "landing" / "news"
 
-ARTICLE_URLS = [
+# Điền tối thiểu 5 URL công khai. Chạy lại script sẽ ghi đè file JSON.
+ARTICLE_URLS = [ 
+    "https://vnexpress.net/dan-ban-hang-online-lo-bi-truy-thu-thue-4755087.html", 
+    "https://cafef.vn/cu-soc-thue-voi-tiep-thi-lien-ket-nhan-ve-tui-3-ty-dong-nhung-bi-truy-thue-gan-700-trieu-dong-vi-ly-do-sau-day-188260509162820923.chn",
+    "https://thuehaiquan.tapchikinhtetaichinh.vn/chinh-thuc-xoa-bo-thue-khoan-tu-2026-giai-phap-giup-ho-kinh-doanh-ke-khai-thue-dung-va-ben-vung-150688.html", 
+    "https://vietnamnet.vn/ap-thue-20-lai-ban-bat-dong-san-can-lam-ro-can-cu-nao-de-tinh-tien-lai-2425198.html", 
+    "https://mva.vn/bo-thue-khoan-ho-kinh-doanh-tu-nam-2026/" 
     # TODO: Thêm ít nhất 5 public URL.
 ]
 
 
 async def crawl_article(url: str) -> dict:
-    # TODO: Implement crawling logic.
-    #
-    # from datetime import datetime
-    # from crawl4ai import AsyncWebCrawler
-    #
-    # async with AsyncWebCrawler() as crawler:
-    #     result = await crawler.arun(url=url)
-    #     return {
-    #         "url": url,
-    #         "title": result.metadata.get("title", "Unknown"),
-    #         "date_crawled": datetime.now().isoformat(),
-    #         "content_markdown": result.markdown,
-    #     }
-    raise NotImplementedError("Implement crawl_article")
+    """Crawl một bài viết và trả về dict theo contract của Task 2."""
+    from crawl4ai import AsyncWebCrawler
+
+    async with AsyncWebCrawler() as crawler:
+        result = await crawler.arun(url=url)
+
+    metadata = result.metadata or {}
+    title = str(metadata.get("title") or "").strip() or url
+    content = (result.markdown or "").strip()
+    if not content:
+        raise RuntimeError(f"Không trích xuất được markdown từ {url}")
+
+    return {
+        "url": url,
+        "title": title,
+        "date_crawled": datetime.now().isoformat(timespec="seconds"),
+        "content_markdown": content,
+    }
 
 
 async def crawl_all() -> None:
@@ -60,4 +71,9 @@ async def crawl_all() -> None:
 
 
 if __name__ == "__main__":
+    if not ARTICLE_URLS:
+        print(
+            "ARTICLE_URLS đang trống. Thêm ít nhất 5 URL công khai "
+            "vào ARTICLE_URLS rồi chạy lại."
+        )
     asyncio.run(crawl_all())
